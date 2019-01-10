@@ -1,0 +1,304 @@
+/*
+================================================
+ Common CSS
+================================================
+*/
+#scrollUp {
+	background: #ff7e00;
+	border-bottom: 3px solid #fd8d1f;
+}
+#switcher .theme-color-six {
+  background: #ff7e00;
+}
+.bttn {
+	background: #ff7e00;
+}
+/*
+================================================
+ Header Logo Area
+================================================
+*/
+.header-logo-area .logo a {
+	color: #ff7e00;
+}
+.header-logo-icon i {
+	background: #ff7e00;
+}
+/*
+================================================
+ Menu Area
+================================================
+*/
+.main-menu-area ul li.active > a {
+	color: #ff7e00;
+}
+.main-menu-area ul li a:hover {
+	color: #ff7e00;
+}
+.main-menu-area ul li ul li a:hover {
+	color: #ff7e00;
+}
+.main-menu-area ul li ul li a::before {
+	background-color: #ff7e00;
+}
+.main-menu-area ul li ul.mega-menu > li ul li a:hover {
+	color: #ff7e00;
+}
+.main-menu-area ul li.meg-drp-menu ul.mega-menu {
+	border-top: 3px solid #ff7e00;
+}
+.main-menu-area ul li ul.mega-menu, .main-menu-area ul li ul.dropdown_menu {
+	border-top: 3px solid #ff7e00;
+}
+/*
+================================================
+ Slider Area
+================================================
+*/
+.sb-nivo-slider-wrapper .nivo-directionNav a:hover {
+	background: #ff7e00;
+	border-color: #ff7e00;
+}
+.sb-nivo-slider-wrapper .nivo-controlNav a:hover, .sb-nivo-slider-wrapper .nivo-controlNav a.active {
+	background: #ff7e00;
+}
+a.sb-active-button {
+	background: #ff7e00;
+	border-color: #ff7e00;
+}
+/*
+================================================
+ Our Featured Wrapper
+================================================
+*/
+.featured-box:hover, .featured-box.active {
+	background: #ff7e00;
+}
+/*
+================================================
+ Our Services Wrapper
+================================================
+*/
+.single-services .media i {
+	color: #ff7e00;
+}
+/*
+================================================
+ Our Team Wrapper
+================================================
+*/
+.team-members-right a {
+  color: #ff7e00;
+}
+/*
+================================================
+ Tabs Wrapper
+================================================
+*/
+.tabs-wrapper .nav-tabs .nav-link:hover, .tabs-wrapper .nav-tabs .nav-link.active {
+  background-color: #ff7e00;
+  border-color: #ff7e00 #ff7e00 #ff7e00;
+}
+.tabs-wrapper .tabs-vertical li a{
+  border-color: #e9ecef #e9ecef #dee2e6;
+}
+/*
+================================================
+ Table Wrapper
+================================================
+*/
+.tables1 th {
+    background-color: #ff7e00;
+}
+.tables3 th {
+    background-color: #ff7e00;
+}
+/*
+================================================
+ Numbering Wrapper
+================================================
+*/
+.counter-icon .icon {
+  background: #ff7e00;
+}
+/*
+================================================
+ Our Blog Wrapper
+================================================
+*/
+.blog_icon_overlay li {
+  color: #ff7e00;
+}
+.blog_btm_cntnt a {
+  color: #ff7e00;
+}
+.blog_icon_overlay li span {
+  color: #ff7e00 !important;
+}
+.blog_img_wraper:before {
+	background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 30%, rgba(255, 126, 0, 0.8) 100%);
+	background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 30%, rgba(255, 126, 0, 0.8) 100%);
+	background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 30%, rgba(255, 126, 0, 0.8) 100%);
+ filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#00f0f9ff', endColorstr='#ff7e00', GradientType=0);
+}
+.btc_blog_single_post_bottom_post_wrapper h1 span{
+	color:#ff7e00;
+}
+.btc_blog_single_post_quote_wrapper2:after{
+    border: 1px solid #ff7e00;
+    background: #ff7e00;
+}
+.btc_blog_single_post_bottom_post_wrapper:after{
+    border: 2px solid #ff7e00;
+}
+.search_form button i {
+    color: #ff7e00;
+}
+.archives_wrapper span {
+    color: #ff7e00;
+}
+.archives_wrapper ul li i {
+    color: #ff7e00;
+}
+.archives_wrapper ul li:hover a,
+.archives_wrapper ul li:hover i {
+    color: #ff7e00;
+}
+.sc_blog_date {
+    color: #ff7e00;
+}
+.sc_blog_text h5 a:hover {
+    color: #ff7e00;
+}
+/*
+================================================
+ Pricing Wrapper
+================================================
+*/
+.pricing_table:hover .price_table_btn a {
+	border-color: #ff7e00;
+	background: #ff7e00;
+}
+.top_border_1:before {
+	background: #ff7e00;
+}
+.price_table_icon i {
+	color: #ff7e00;
+}
+.price_table_btn a {
+	color: #ff7e00;
+}
+.price_table_btn a:hover {
+	border-color: #ff7e00;
+	background: #ff7e00;
+}
+/*
+================================================
+ Testimonials Wrapper
+================================================
+*/
+.testimonials-wrapper .owl-theme .owl-nav [class*="owl-"]:hover {
+	border-color: #ff7e00;
+	color: #ff7e00;
+}
+.testimonial-block .inner-box .content .quote-icon {
+	color: #ff7e00;
+}
+/*
+================================================
+ News Letter Wrapper
+================================================
+*/
+.text-primary, a.text-primary:focus, a.text-primary:hover {
+	color: #ff7e00 !important;
+}
+/*
+================================================
+ Breadcrumb Wrapper
+================================================
+*/
+.page-breadcrumb {
+	border-color: #ff7e00;
+}
+.page-breadcrumb li:last-child {
+	color: #ff7e00;
+}
+/*
+================================================
+ About Us Wrapper
+================================================
+*/
+.about-wrapper .tab-list li a::before {
+	background-color: #ff7e00;
+}
+/*
+================================================
+ FAQ Page
+================================================
+*/
+.inner-page-wrapper .faq-block {
+	background: #ff7e00;
+}
+.faq-testimoni .owl-prev {
+  color: #ff7e00;
+}
+.faq-client-photo img {
+  border: 2px solid #ff7e00;
+}
+.faq-testimoni .owl-prev {
+  color: #ff7e00;
+}
+.faq-testimoni .owl-nav i {
+  color: #ff7e00;
+}
+/*
+================================================
+  Error Wrapper
+================================================
+*/
+.error-wrapper .h1 {
+  color: #ff7e00;
+}
+/*
+================================================
+ Gallery Area
+================================================
+*/
+.see-more-btn a {
+	color: #ff7e00;
+	border: 2px solid #ff7e00;	
+}
+.see-more-btn a:hover{
+    background-color: #ff7e00;
+    border-color: #ff7e00;
+}
+.single-gallery-img a::before{
+    background-color: rgba(255, 126, 0, 0.7);
+}
+/*
+================================================
+ Coming Soon Wrapper
+================================================
+*/
+.coming-soon h2 {
+  color: #ff7e00;
+}
+/*
+================================================
+ Contact Wrapper
+================================================
+*/
+.contactus-wrapper .contact-info-list li span {
+  color: #ff7e00;
+}
+.contactus-wrapper .contact-info-list li:after {
+  background-color: #ff7e00;
+}
+/*
+================================================
+Footer
+================================================
+*/
+footer .footer-text .footer-logo {
+	color: #ff7e00;
+}

@@ -1,0 +1,94 @@
+/* -----------------------------------
+Template Name: Eduworld
+Description: This is html5 template
+Author: sbtechnosoft
+Version: 1.0
+NOTE: This is Slider style file. All Slider related style included in this file.
+
+--------------------------------------*/
+
+.slider-area .owl-carousel .owl-stage .owl-item {
+    transition-property: opacity;
+}
+.slider-area .owl-carousel .owl-stage .owl-item, .slider-area .owl-carousel .owl-stage .owl-item.active .owl-prev, .slider-area .owl-carousel .owl-stage .owl-item.active .owl-next {
+    opacity: 0;
+}
+.slider-area .owl-carousel .owl-stage .owl-item.active, .slider-area .owl-carousel .owl-stage .owl-item.active .owl-prev, .slider-area .owl-carousel .owl-stage .owl-item.active .owl-next {
+    opacity: 1;
+}
+.slider-area .owl-carousel .owl-stage .owl-item .next, .banner-wrapper .fade-carousel .carousel-inner .prev, .banner-wrapper .fade-carousel .carousel-inner .active.left, .banner-wrapper .fade-carousel .carousel-inner .active.right {
+    left: 0;
+    transform: translate3d(0, 0, 0);
+}
+.slider-area img, .slider-two-area img {width: 100%;}
+.slider-area, .slider-two-area, .banner-content,.single-slide, .owl-item, .owl-stage, .slider-wrapper, .owl-stage-outer, .banner-content .container, .banner-content .row, .banner-content .col-lg-7, .banner-content .col-lg-8, .banner-content .text-content-wrapper, .banner-content .text-content, .banner-content .display-table, .banner-content .display-table-cell{
+    height: 100%;
+}
+.slider-area {
+    height: 500px;
+    overflow: hidden;
+    position: relative;
+	margin-top:-36px;
+}
+.text-content-wrapper, .slider-area img, .slider-two-area img {width: 100%;}
+.banner-content .text-content-wrapper {display: table;}
+.banner-content .text-content {
+    display: table-cell;
+    vertical-align: middle;
+}
+.banner-btn {clear: both; display: block;}
+.slider-area .button-default, .slider-two-area .button-default{display: inline;}
+.banner-content h2 {
+    font-size: 35px;
+    line-height: 34px;
+    margin-bottom: 29px;
+    text-transform: capitalize;
+}
+.banner-content h1 {
+    font-weight: 700;
+    font-size: 45px;
+    line-height: 36px;
+    margin-bottom: 30px;
+	color: #002147
+}
+.banner-content h1 span {color: #002147}
+.banner-content p {
+    color: #444444;
+    font-weight: 500;
+    margin-bottom: 22px;
+    padding-right: 110px;
+}
+.slider-area .owl-item.active .banner-content h2, .slider-area .owl-item.active .banner-content h1, .slider-area .owl-item.active .banner-content p, .slider-area .owl-item.active .banner-content .banner-btn{
+    -webkit-animation: 1000ms ease-in-out 0s normal both 1 running fadeInUp;
+            animation: 1000ms ease-in-out 0s normal both 1 running fadeInUp;
+}
+.slider-area .owl-item.active .banner-content h2 {-webkit-animation-delay: 600ms;animation-delay: 600ms} 
+.slider-area .owl-item.active .banner-content h1 {-webkit-animation-delay: 1100ms;animation-delay: 1100ms} 
+.slider-area .owl-item.active .banner-content p {-webkit-animation-delay: 1600ms;animation-delay: 1600ms} 
+.slider-area  .owl-item.active .banner-content .banner-btn {
+    -webkit-animation-delay: 2100ms;animation-delay: 2100ms
+}
+.slider-area .owl-theme .owl-nav > div {
+  background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+  border: 2px solid #86bc42;
+  color: #86bc42;
+  font-size: 30px;
+  height: 50px;
+  left: -56px;
+  line-height: 50px;
+  margin-top: -20px;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  -webkit-transition: all 0.4s ease 0s;
+  transition: all 0.4s ease 0s;
+  width: 50px;
+  z-index: 999;
+  padding:0;
+  line-height:45px;
+}
+.owl-nav .owl-next {left: auto; right: -56px;}
+.slider-area:hover .owl-nav .owl-prev {left: 10px; right:auto;}
+.slider-area:hover .owl-nav .owl-next {left: auto;  right: 10px;}
+.owl-theme .owl-nav [class*="owl-"]:hover{border-color: #86bc42; color: #86bc42;}
+.single-slide{background-position: top center; background-size: cover}
