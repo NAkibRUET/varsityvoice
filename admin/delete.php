@@ -8,7 +8,12 @@
         header('Location: login');
     }
     $did = $_GET['did'];
+    $qx = mysqli_query($con, "SELECT * from contents WHERE id='$did'");
+    $row = mysqli_fetch_array($qx);
+    $file = $row['file_name'];
+    $path = '../posts/'.$file;
     $qr = mysqli_query($con, "DELETE from contents WHERE id='$did'");
+    unlink($path);
 ?>
 <!DOCTYPE html>
 <html>

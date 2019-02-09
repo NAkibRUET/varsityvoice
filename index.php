@@ -57,6 +57,14 @@
     }
   } 
 ?>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 
 <div class="inner-page-wrapper blog-wrapper" style="margin-top: -40px;">
   <div class="container">
@@ -64,7 +72,7 @@
       <div class="col-md-12 col-lg-8">
         <div class="row">
           <div class="col-lg-12 mb-5">
-            <div class="blog_box_wrapper">
+            <a style="text-decoration:none;" href="details.php?id=<?php echo $newsid; ?>"><div class="blog_box_wrapper">
               <div class="blog_img_wraper"> <img alt="" src="posts/<?php echo $file;?>" min-width="700px"> </div>
               <div class="blog_icon_overlay">
                 <ul>
@@ -77,12 +85,29 @@
                 <p class="pad-b-10"><?php echo $content; ?>....</p>
                 <a class="tb_toppadder20" href="details.php?id=<?php echo $newsid; ?>">আরও পড়ুন</a> 
               </div>
-            </div>
+            </div></a>
           </div>
         </div>
       </div>
       <div class="col-md-12 col-lg-4">
+        <div class="fb-like" data-href="https://www.facebook.com/varsityvoicebd/" data-width="330" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="false"></div>
         <div class="sidebar_widget">
+          <br>
+          <div class="row">
+            <div class="col-md-6">
+              <a href="https://www.biye24.com.bd"><img src="biye24_add.gif" width="100%" alt="biye24.com Add" style="max-width: 300px;"></a>
+              <br>
+              <br>
+            </div>
+            <div class="col-md-6">
+              <a href="https://www.facebook.com/DocenBD/"><img src="docen_add.png" width="100%" alt="biye24.com Add" style="max-width: 300px;"></a>
+              <br>
+              <br>
+            </div>
+          </div>
+          
+        
+          <br>
           <h4 style="font-family:Bangla,sans-serif;border-bottom: 1px solid #7f7f7f;"> সর্বশেষ <span> খবর </span> </h4>
           <div class="latest_post_wrapper">
             <?php
@@ -140,7 +165,7 @@
                   }
             ?>
                   <div class="blog_wrapper2">
-                    <div class="sc_blog_image"> <img alt="blog_img1" class="img-responsive" src="posts/<?php echo $file; ?>" width="80px"> </div>
+                    <div class="sc_blog_image"> <a href="details.php?id=<?php echo $ids; ?>" style="font-family: Bangla,sans-serif"><img alt="blog_img1" class="img-responsive" src="posts/<?php echo $file; ?>" width="80px"></a> </div>
                     <div class="sc_blog_text">
                       <h5 style="width: 80%;"><a href="details.php?id=<?php echo $ids; ?>" style="font-family: Bangla,sans-serif;"><?php echo $heading; ?></a></h5>
                       <div class="sc_blog_date"><span style="color: #7f7f7f"><?php echo $ptime; ?>,</span> <?php echo $date;?> <?php echo $mname; ?>'<?php echo $year;?></div>
@@ -175,7 +200,7 @@
     //for($i=0;$i<$ct;$i++){
       $row = mysqli_fetch_array($qr);
       $newsid = $row['id'];
-      $heading = $row['heading'];
+      $heading = mb_substr($row['heading'], 0, 140);
       $file = $row['file_name'];
       
   ?>
@@ -201,7 +226,7 @@
     for($i=0;$i<$ct;$i++){
       $row = mysqli_fetch_array($qr);
       $newsid = $row['id'];
-      $heading = $row['heading'];
+      $heading = mb_substr($row['heading'], 0, 140);
       $file = $row['file_name'];
       
   ?>
@@ -239,7 +264,7 @@
     //for($i=0;$i<$ct;$i++){
       $row = mysqli_fetch_array($qr);
       $newsid = $row['id'];
-      $heading = $row['heading'];
+      $heading = mb_substr($row['heading'], 0, 140);
       $file = $row['file_name'];
       
   ?>
@@ -265,7 +290,7 @@
     for($i=0;$i<$ct;$i++){
       $row = mysqli_fetch_array($qr);
       $newsid = $row['id'];
-      $heading = $row['heading'];
+      $heading = mb_substr($row['heading'], 0, 140);
       $file = $row['file_name'];
       
   ?>
@@ -304,7 +329,7 @@
     //for($i=0;$i<$ct;$i++){
       $row = mysqli_fetch_array($qr);
       $newsid = $row['id'];
-      $heading = $row['heading'];
+      $heading = mb_substr($row['heading'], 0, 140);
       $file = $row['file_name'];
       
   ?>
@@ -330,7 +355,7 @@
     for($i=0;$i<$ct;$i++){
       $row = mysqli_fetch_array($qr);
       $newsid = $row['id'];
-      $heading = $row['heading'];
+      $heading = mb_substr($row['heading'], 0, 140);
       $file = $row['file_name'];
       
   ?>
@@ -368,7 +393,7 @@
     //for($i=0;$i<$ct;$i++){
       $row = mysqli_fetch_array($qr);
       $newsid = $row['id'];
-      $heading = $row['heading'];
+      $heading = mb_substr($row['heading'], 0, 140);
       $file = $row['file_name'];
       
   ?>
@@ -394,7 +419,7 @@
     for($i=0;$i<$ct;$i++){
       $row = mysqli_fetch_array($qr);
       $newsid = $row['id'];
-      $heading = $row['heading'];
+      $heading = mb_substr($row['heading'], 0, 140);
       $file = $row['file_name'];
       
   ?>
@@ -440,7 +465,7 @@
     //for($i=0;$i<$ct;$i++){
       $row = mysqli_fetch_array($qr);
       $newsid = $row['id'];
-      $heading = $row['heading'];
+      $heading = mb_substr($row['heading'], 0, 140);
       $file = $row['file_name'];
       
   ?>
@@ -466,7 +491,7 @@
     for($i=0;$i<$ct;$i++){
       $row = mysqli_fetch_array($qr);
       $newsid = $row['id'];
-      $heading = $row['heading'];
+      $heading = mb_substr($row['heading'], 0, 140);
       $file = $row['file_name'];
       
   ?>
@@ -504,7 +529,7 @@
     //for($i=0;$i<$ct;$i++){
       $row = mysqli_fetch_array($qr);
       $newsid = $row['id'];
-      $heading = $row['heading'];
+      $heading = mb_substr($row['heading'], 0, 140);
       $file = $row['file_name'];
       
   ?>
@@ -530,7 +555,7 @@
     for($i=0;$i<$ct;$i++){
       $row = mysqli_fetch_array($qr);
       $newsid = $row['id'];
-      $heading = $row['heading'];
+      $heading = mb_substr($row['heading'], 0, 140);
       $file = $row['file_name'];
       
   ?>
@@ -568,7 +593,7 @@
     //for($i=0;$i<$ct;$i++){
       $row = mysqli_fetch_array($qr);
       $newsid = $row['id'];
-      $heading = $row['heading'];
+      $heading = mb_substr($row['heading'], 0, 140);
       $file = $row['file_name'];
       
   ?>
@@ -594,7 +619,7 @@
     for($i=0;$i<$ct;$i++){
       $row = mysqli_fetch_array($qr);
       $newsid = $row['id'];
-      $heading = $row['heading'];
+      $heading = mb_substr($row['heading'], 0, 140);
       $file = $row['file_name'];
       
   ?>
@@ -631,7 +656,7 @@
     //for($i=0;$i<$ct;$i++){
       $row = mysqli_fetch_array($qr);
       $newsid = $row['id'];
-      $heading = $row['heading'];
+      $heading = mb_substr($row['heading'], 0, 140);
       $file = $row['file_name'];
       
   ?>
@@ -657,7 +682,7 @@
     for($i=0;$i<$ct;$i++){
       $row = mysqli_fetch_array($qr);
       $newsid = $row['id'];
-      $heading = $row['heading'];
+      $heading = mb_substr($row['heading'], 0, 140);
       $file = $row['file_name'];
       
   ?>
@@ -703,7 +728,7 @@
     //for($i=0;$i<$ct;$i++){
       $row = mysqli_fetch_array($qr);
       $newsid = $row['id'];
-      $heading = $row['heading'];
+      $heading = mb_substr($row['heading'], 0, 140);
       $file = $row['file_name'];
       
   ?>
@@ -729,7 +754,7 @@
     for($i=0;$i<$ct;$i++){
       $row = mysqli_fetch_array($qr);
       $newsid = $row['id'];
-      $heading = $row['heading'];
+      $heading = mb_substr($row['heading'], 0, 140);
       $file = $row['file_name'];
       
   ?>
@@ -768,7 +793,7 @@
     //for($i=0;$i<$ct;$i++){
       $row = mysqli_fetch_array($qr);
       $newsid = $row['id'];
-      $heading = $row['heading'];
+      $heading = mb_substr($row['heading'], 0, 140);
       $file = $row['file_name'];
       
   ?>
@@ -794,7 +819,7 @@
     for($i=0;$i<$ct;$i++){
       $row = mysqli_fetch_array($qr);
       $newsid = $row['id'];
-      $heading = $row['heading'];
+      $heading = mb_substr($row['heading'], 0, 140);
       $file = $row['file_name'];
       
   ?>
@@ -834,7 +859,7 @@
     //for($i=0;$i<$ct;$i++){
       $row = mysqli_fetch_array($qr);
       $newsid = $row['id'];
-      $heading = $row['heading'];
+      $heading = mb_substr($row['heading'], 0, 140);
       $file = $row['file_name'];
       
   ?>
@@ -860,7 +885,7 @@
     for($i=0;$i<$ct;$i++){
       $row = mysqli_fetch_array($qr);
       $newsid = $row['id'];
-      $heading = $row['heading'];
+      $heading = mb_substr($row['heading'], 0, 140);
       $file = $row['file_name'];
       
   ?>
@@ -898,7 +923,7 @@
     //for($i=0;$i<$ct;$i++){
       $row = mysqli_fetch_array($qr);
       $newsid = $row['id'];
-      $heading = $row['heading'];
+      $heading = mb_substr($row['heading'], 0, 140);
       $file = $row['file_name'];
       
   ?>
@@ -924,7 +949,7 @@
     for($i=0;$i<$ct;$i++){
       $row = mysqli_fetch_array($qr);
       $newsid = $row['id'];
-      $heading = $row['heading'];
+      $heading = mb_substr($row['heading'], 0, 140);
       $file = $row['file_name'];
       
   ?>
@@ -971,7 +996,7 @@
     //for($i=0;$i<$ct;$i++){
       $row = mysqli_fetch_array($qr);
       $newsid = $row['id'];
-      $heading = $row['heading'];
+      $heading = mb_substr($row['heading'], 0, 140);
       $file = $row['file_name'];
       
   ?>
@@ -997,7 +1022,7 @@
     for($i=0;$i<$ct;$i++){
       $row = mysqli_fetch_array($qr);
       $newsid = $row['id'];
-      $heading = $row['heading'];
+      $heading = mb_substr($row['heading'], 0, 140);
       $file = $row['file_name'];
       
   ?>
@@ -1034,7 +1059,7 @@
     //for($i=0;$i<$ct;$i++){
       $row = mysqli_fetch_array($qr);
       $newsid = $row['id'];
-      $heading = $row['heading'];
+      $heading = mb_substr($row['heading'], 0, 140);
       $file = $row['file_name'];
       
   ?>
@@ -1060,7 +1085,7 @@
     for($i=0;$i<$ct;$i++){
       $row = mysqli_fetch_array($qr);
       $newsid = $row['id'];
-      $heading = $row['heading'];
+      $heading = mb_substr($row['heading'], 0, 140);
       $file = $row['file_name'];
       
   ?>
@@ -1099,7 +1124,7 @@
     //for($i=0;$i<$ct;$i++){
       $row = mysqli_fetch_array($qr);
       $newsid = $row['id'];
-      $heading = $row['heading'];
+      $heading = mb_substr($row['heading'], 0, 140);
       $file = $row['file_name'];
       
   ?>
@@ -1125,7 +1150,7 @@
     for($i=0;$i<$ct;$i++){
       $row = mysqli_fetch_array($qr);
       $newsid = $row['id'];
-      $heading = $row['heading'];
+      $heading = mb_substr($row['heading'], 0, 140);
       $file = $row['file_name'];
       
   ?>
@@ -1162,7 +1187,7 @@
     //for($i=0;$i<$ct;$i++){
       $row = mysqli_fetch_array($qr);
       $newsid = $row['id'];
-      $heading = $row['heading'];
+      $heading = mb_substr($row['heading'], 0, 140);
       $file = $row['file_name'];
       
   ?>
@@ -1188,7 +1213,7 @@
     for($i=0;$i<$ct;$i++){
       $row = mysqli_fetch_array($qr);
       $newsid = $row['id'];
-      $heading = $row['heading'];
+      $heading = mb_substr($row['heading'], 0, 140);
       $file = $row['file_name'];
       
   ?>
@@ -1230,53 +1255,53 @@
         <div class="col-lg-3 col-md-6">
           <div class="counter">
             <div class="counter-icon-box">
-  		 <div class="counter-icon">
-  		 <div class="icon"><a href="#"><i class="icon icon-clock"></i></a></div>
-  		 </div>
+       <div class="counter-icon">
+       <div class="icon"><a href="#"><i class="icon icon-clock"></i></a></div>
+       </div>
             <div class="count-description">
-  		  <div class="number animateNumber" data-num="6535"> <span>6535+</span></div>
+        <div class="number animateNumber" data-num="6535"> <span>6535+</span></div>
             <p>Hours Worked</p>
           </div>
-  		</div>
+      </div>
         </div>
-  	  </div>
+      </div>
         <div class="col-lg-3 col-md-6">
           <div class="counter">
             <div class="counter-icon-box">
-  		 <div class="counter-icon">
-  		 <div class="icon"><a href="#"><i class="icon icon-mobile"></i></a></div>
-  		 </div>
+       <div class="counter-icon">
+       <div class="icon"><a href="#"><i class="icon icon-mobile"></i></a></div>
+       </div>
             <div class="count-description">
-  		  <div class="number animateNumber" data-num="585"> <span>585+</span></div>
+        <div class="number animateNumber" data-num="585"> <span>585+</span></div>
             <p>Projects Completed</p>
           </div>
-  		</div>
+      </div>
         </div>
         </div>
         <div class="col-lg-3 col-md-6">
           <div class="counter">
             <div class="counter-icon-box">
-  		 <div class="counter-icon">
-  		 <div class="icon"><a href="#"><i class="icon icon-presentation"></i></a></div>
-  		 </div>
+       <div class="counter-icon">
+       <div class="icon"><a href="#"><i class="icon icon-presentation"></i></a></div>
+       </div>
             <div class="count-description">
-  		  <div class="number animateNumber" data-num="28"> <span>28+</span></div>
+        <div class="number animateNumber" data-num="28"> <span>28+</span></div>
             <p>Theme Experts</p>
           </div>
-  		</div>
+      </div>
         </div>
         </div>
         <div class="col-lg-3 col-md-6">
           <div class="counter">
             <div class="counter-icon-box">
-  		 <div class="counter-icon">
-  		 <div class="icon"><a href="#"><i class="icon icon-trophy"></i></a></div>
-  		 </div>
+       <div class="counter-icon">
+       <div class="icon"><a href="#"><i class="icon icon-trophy"></i></a></div>
+       </div>
             <div class="count-description">
-  		  <div class="number animateNumber" data-num="775"> <span>6535+</span></div>
+        <div class="number animateNumber" data-num="775"> <span>6535+</span></div>
             <p>Awards Won</p>
           </div>
-  		</div>
+      </div>
         </div>
         </div>
       </div>

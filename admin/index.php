@@ -21,12 +21,12 @@
         
         $id = generateRandomString();
         $category = $_POST['category'];
-        $heading = $_POST['heading'];
-        $writer = $_POST['writer'];
+        $heading = mysqli_real_escape_string($con,$_POST['heading']);
+        $writer = mysqli_real_escape_string($con,$_POST['writer']);
         $file_name = $_FILES['contentImage']['name'];
         $file_size =$_FILES['contentImage']['size'];
         $file_tmp =$_FILES['contentImage']['tmp_name'];
-        $content = $_POST['content'];
+        $content = mysqli_real_escape_string($con,$_POST['content']);
         $mainNews = $_POST['mainNews'];
         $scrollNews = $_POST['scrollNews'];
         $error = "";

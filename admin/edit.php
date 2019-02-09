@@ -12,11 +12,11 @@
     $qr = mysqli_query($con, "SELECT * FROM contents WHERE id = '$eid'");
     $row = mysqli_fetch_array($qr);
     $category = $row['category'];
-    $content = $row['content'];
-    $heading = $row['heading'];
+    $content = mysqli_real_escape_string($con,$row['content']);
+    $heading = mysqli_real_escape_string($con,$row['heading']);
     $mainNews = $row['mainNews'];
     $scrollNews = $row['scrollNews'];
-    $writer = $row['writer'];
+    $writer = mysqli_real_escape_string($con,$row['writer']);
     $time = $row['time'];
 
     if(isset($_POST['submit'])){

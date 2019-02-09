@@ -1,9 +1,13 @@
 <footer class="footer" style="background:#333;">
   <div class="container">
+    <div>
+        <h4 style="font-family: 'Bangla', sans-serif; text-align: center; color:white;">উপদেষ্টা সম্পাদক: জেড আই জাহিদ</h4>
+        <br>
+    </div>
     <div class="row">
       <div class="col-xl-4 col-md-6">
         <div class="footer-text"> <a class="footer-logo" href="index.php">Varsity<span>Voice</span></a>
-          <img style="margin-left:7px; " src="rsz_logo.jpg" width="180px">
+          <img style="margin-left:12px; " src="rsz_logo.jpg" width="100px">
           <div  style="margin-left:6px; " class="social-icons"> <a href="javascript:void(0)" class="bttn"> <i class="fa fa-twitter"></i> </a> <a href="javascript:void(0)" class="bttn"><i class="fa fa-linkedin"></i></a> <a href="https://www.facebook.com/varsityvoicebd/" class="bttn"> <i class="fa fa-facebook"></i> </a> <a href="javascript:void(0)" class="bttn"> <i class="fa fa-skype"></i> </a> <a href="javascript:void(0)" class="bttn"> <i class="fa fa-pinterest-p"></i> </a> </div>
         </div>
       </div>
@@ -11,10 +15,10 @@
         <div class="links">
           <h3>Links</h3>
           <ul class="">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about-us.html">About Us</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="index.php">Home</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Gallery</a></li>
           </ul>
         </div>
       </div>
@@ -23,7 +27,7 @@
           <h3>Location</h3>
           <ul>
             <li>Dhaka, Bangladesh</li>
-            <li><i class="fa fa-phone"></i> <a href="#">[01] 657 524 332</a></li>
+            <li><i class="fa fa-phone"></i> <a href="#">+8801521494177</a></li>
             <li><i class="fa fa-envelope"></i> <a href="mailto:"> info@varsityvoice.net </a></li>
             <li><i class="fa fa-envelope"></i> <a href="mailto:"> admin@varsityvoice.net </a></li>
           </ul>
