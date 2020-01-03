@@ -29,6 +29,7 @@
       $newsid = $row['id'];
       $content = mb_substr(nl2br($row['content']), 0, 200);
       $heading = $row['heading'];
+      $url = str_replace(" ", "-", $heading);
       $main = $row['mainNews'];
       $file = $row['file_name'];
       $pdate = $row['time'];
@@ -77,7 +78,7 @@
 ?>
       <div class="col-lg-12 mb-5">
       <div class="blog_box_wrapper">
-        <div class="blog_img_wraper"> <img alt="" src="posts/<?php echo $file;?>"> </div>
+        <div class="blog_img_wraper"> <img alt="" src="https://www.varsityvoice.net/posts/<?php echo $file;?>"> </div>
           <div class="blog_icon_overlay">
             <ul>
               <li> <?php echo $date;?> <span> <?php echo $mname; ?></span></li>
@@ -87,7 +88,7 @@
           <div class="blog_btm_cntnt">
             <h2 style="font-family: Bangla,sans-serif; font-size: 24px;"><?php echo $heading; ?></h2>
             <p class="pad-b-10"><?php echo $content; ?>....</p>
-            <a class="tb_toppadder20" href="details.php?id=<?php echo $newsid; ?>">আরও পড়ুন</a> 
+            <a class="tb_toppadder20" href="/details/<?php echo $url; ?>/<?php echo $newsid; ?>">আরও পড়ুন</a> 
           </div>
       </div>
     </div>
@@ -103,6 +104,7 @@ else{
       $newsid = $row['id'];
       $content = mb_substr(nl2br($row['content']), 0, 200);
       $heading = $row['heading'];
+      $url = str_replace(" ", "-", $heading);
       $main = $row['mainNews'];
       $file = $row['file_name'];
       $pdate = $row['time'];
@@ -151,7 +153,7 @@ else{
   ?>
   <div class="col-lg-12 mb-5">
       <div class="blog_box_wrapper">
-        <div class="blog_img_wraper"> <img alt="" src="posts/<?php echo $file;?>"> </div>
+        <div class="blog_img_wraper"> <img alt="" src="https://www.varsityvoice.net/posts/<?php echo $file;?>"> </div>
           <div class="blog_icon_overlay">
             <ul>
               <li> <?php echo $date;?> <span> <?php echo $mname; ?></span></li>
@@ -161,7 +163,7 @@ else{
           <div class="blog_btm_cntnt">
             <h2 style="font-family: Bangla,sans-serif; font-size: 24px;"><?php echo $heading; ?></h2>
             <p class="pad-b-10"><?php echo $content; ?>....</p>
-            <a class="tb_toppadder20" href="details.php?id=<?php echo $newsid; ?>">আরও পড়ুন</a> 
+            <a class="tb_toppadder20" href="/details/<?php echo $url; ?>/<?php echo $newsid; ?>">আরও পড়ুন</a> 
           </div>
       </div>
     </div>
@@ -223,6 +225,7 @@ else{
                   $ids = $row['id'];
                   $content = mb_substr(nl2br($row['content']), 0, 200);
                   $heading = $row['heading'];
+                  $url = str_replace(" ", "-", $heading);
                   $main = $row['mainNews'];
                   $file = $row['file_name'];
                   $pdate = $row['time'];
@@ -270,9 +273,9 @@ else{
                   }
             ?>
                   <div class="blog_wrapper2">
-                    <div class="sc_blog_image"> <img alt="blog_img1" class="img-responsive" src="posts/<?php echo $file; ?>" width="80px"> </div>
+                    <div class="sc_blog_image"> <img alt="blog_img1" class="img-responsive" src="https://www.varsityvoice.net/posts/<?php echo $file; ?>" width="80px"> </div>
                     <div class="sc_blog_text">
-                      <h5><a href="details.php?id=<?php echo $ids; ?>" style="font-family:Bangla,sans-serif;"><?php echo $heading; ?></a></h5>
+                      <h5><a href="/details/<?php echo $url; ?>/<?php echo $ids; ?>" style="font-family:Bangla,sans-serif;"><?php echo $heading; ?></a></h5>
                       <div class="sc_blog_date"><span style="color: #7f7f7f"><?php echo $ptime; ?>,</span> <?php echo $date;?> <?php echo $mname; ?>'<?php echo $year;?></div>
                     </div>
                   </div>

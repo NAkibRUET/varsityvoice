@@ -1,7 +1,10 @@
 <?php
   require_once('db_connect.php');
-  
-  $newsid = $_GET['id'];
+  if(isset($_REQUEST["id"])){
+    $newsid = $_REQUEST["id"];
+    //$category = str_replace("-", " ", $category);
+  }
+  ////$newsid = $_GET['id'];
   $qr = "SELECT * FROM contents WHERE id = '$newsid'";
     $rn = mysqli_query($con, $qr);
   if(mysqli_num_rows($rn)>0){
@@ -24,7 +27,7 @@
 <html lang="en">
 
 <head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title><?php echo $heading; ?></title>
+<title><?php echo $heading; ?> | VarsityVoice</title>
 
 
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -49,11 +52,11 @@
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
 <!--<link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">-->
 <!-- Custom CSS -->
-<link href="css/style.css" rel="stylesheet">
+<link href="https://www.varsityvoice.net/css/style.css" rel="stylesheet">
 <!-- Colors CSS -->
-<link href="css/one.css" id="style_theme" rel="stylesheet">
+<link href="https://www.varsityvoice.net/css/one.css" id="style_theme" rel="stylesheet">
 <!-- Favicon -->
-<link rel="shortcut icon" type="image/x-icon" href="logoxxx.jpg">
+<link rel="shortcut icon" type="image/x-icon" href="https://www.varsityvoice.net/logoxxx.jpg">
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 <!--[if lt IE 9]>
@@ -88,9 +91,14 @@
       color: #000;
     }
     .keyCategory:hover{
+      color:#EA0107;
+    }
+    .newscategory{
+      color:#000;
+    }
+    .newscategory:hover{
       color:#D23136;
     }
-    
 
   </style>
 </head>
@@ -129,7 +137,7 @@
     <div class="row">
       <div class="col-xl-2 col-lg-2 col-md-4">
         <div class="logo-design"> 
-          <img src="logoxxx.jpg" width="90%">
+          <img src="https://www.varsityvoice.net/logoxxx.jpg" width="90%">
         </div>
       </div>
       <div class="col-xl-10 col-lg-10 col-md-8 d-none d-lg-block d-md-block">
@@ -198,38 +206,38 @@
                 <li><a href="https://www.varsityvoice.net"><i class="fa fa-home"></i> হোম</a></li>
                 <li><a href="#">ভার্সিটি</a>
                   <ul class="dropdown_menu">
-                    <li><a href="/Public-University">পাবলিক ভার্সিটি</a></li>
-                    <li><a href="/Private-University">প্রাইভেট ভার্সিটি</a></li>
+                    <li><a href="/category/Public-University">পাবলিক ভার্সিটি</a></li>
+                    <li><a href="/category/Private-University">প্রাইভেট ভার্সিটি</a></li>
                     
                     
                   </ul>
                 </li>
-                <li><a href="/National">জাতীয়</a></li>
-                <li><a href="/International">আন্তর্জাতিক</a></li>
+                <li><a href="/category/National">জাতীয়</a></li>
+                <li><a href="/category/International">আন্তর্জাতিক</a></li>
                 
-                <li><a href="/Student-Politics">ছাত্র রাজনীতি</a>
+                <li><a href="/category/Student-Politics">ছাত্র রাজনীতি</a>
                 </li>       
-                <li ><a href="/Science-and-Technology">বিজ্ঞান ও প্রযুক্তি</i></a>
+                <li ><a href="/category/Science-and-Technology">বিজ্ঞান ও প্রযুক্তি</i></a>
                 </li>
-                <li><a href="/Scholarship">স্কলারশিপ</a></li>
+                <li><a href="/category/Scholarship">স্কলারশিপ</a></li>
                         
-                <li><a href="/Admission">এডমিশন</a></li>
+                <li><a href="/category/Admission">এডমিশন</a></li>
                 <li><a href="#">ক্যারিয়ার <i class="fa fa-angle-down"></i></a><ul class="dropdown_menu">
-                        <li><a href="/Success-Story">সফলতার গল্প</a>
+                        <li><a href="/category/Success-Story">সফলতার গল্প</a>
                         </li>
-                        <li><a href="/Interview">সাক্ষাতকার</a></li>
-                        <li><a href="/Job News">চাকরির খবর</a></li>
+                        <li><a href="/category/Interview">সাক্ষাতকার</a></li>
+                        <li><a href="/category/Job-News">চাকরির খবর</a></li>
 
                   </ul></li>
-                <li><a href="/Sports">খেলাধুলা</a></li>
+                <li><a href="/category/Sports">খেলাধুলা</a></li>
                 <li><a href="#">অন্যান্য</a>
                   <ul class="dropdown_menu">
-                    <li><a href="/Entertainment">বিনোদন</a></li>
-                    <li><a href="/Economy">অর্থনীতি</a></li>
-                    <li><a href="/Religion">ধর্ম</a></li>
-                    <li><a href="/Health">স্বাস্থ্য</a></li>
-                    <li><a href="/Literature">সাহিত্য</a></li>
-                    <li><a href="/Innovations">উদ্ভাবন</a>
+                    <li><a href="/category/Entertainment">বিনোদন</a></li>
+                    <li><a href="/category/Economy">অর্থনীতি</a></li>
+                    <li><a href="/category/Religion">ধর্ম</a></li>
+                    <li><a href="/category/Health">স্বাস্থ্য</a></li>
+                    <li><a href="/category/Literature">সাহিত্য</a></li>
+                    <li><a href="/category/Innovations">উদ্ভাবন</a>
                     </li>
                   </ul>
                 </li>
@@ -253,41 +261,41 @@
             <div class="mobile-menu">
               <nav id="mobile-menu-active">
                 <ul>
-                <li><a href="index.php"><i class="fa fa-home"></i> হোম</a></li>
+                <li><a href="https://www.varsityvoice.net"><i class="fa fa-home"></i> হোম</a></li>
                 <li><a href="#">ভার্সিটি</a>
                   <ul class="dropdown_menu">
-                    <li><a href="category.php?name=Public University">পাবলিক ভার্সিটি</a></li>
-                    <li><a href="category.php?name=Private University">প্রাইভেট ভার্সিটি</a></li>
+                    <li><a href="/category/Public-University">পাবলিক ভার্সিটি</a></li>
+                    <li><a href="/category/Private-University">প্রাইভেট ভার্সিটি</a></li>
                     
                     
                   </ul>
                 </li>
-                <li><a href="category.php?name=National">জাতীয়</a></li>
-                <li><a href="category.php?name=International">আন্তর্জাতিক</a></li>
+                <li><a href="/category/National">জাতীয়</a></li>
+                <li><a href="/category/International">আন্তর্জাতিক</a></li>
                 
-                <li><a href="category.php?name=Student Politics">ছাত্র রাজনীতি</a>
+                <li><a href="/category/Student-Politics">ছাত্র রাজনীতি</a>
                 </li>       
-                <li ><a href="category.php?name=Science and Technology">বিজ্ঞান ও প্রযুক্তি</i></a>
+                <li ><a href="/category/Science-and-Technology">বিজ্ঞান ও প্রযুক্তি</i></a>
                 </li>
-                <li><a href="category.php?name=Scholarship">স্কলারশিপ</a></li>
+                <li><a href="/category/Scholarship">স্কলারশিপ</a></li>
                         
-                <li><a href="category.php?name=Admission">এডমিশন</a></li>
+                <li><a href="/category/Admission">এডমিশন</a></li>
                 <li><a href="#">ক্যারিয়ার <i class="fa fa-angle-down"></i></a><ul class="dropdown_menu">
-                        <li><a href="category.php?name=Success Story">সফলতার গল্প</a>
+                        <li><a href="/category/Success-Story">সফলতার গল্প</a>
                         </li>
-                        <li><a href="category.php?name=Interview">সাক্ষাতকার</a></li>
-                        <li><a href="category.php?name=Job News">চাকরির খবর</a></li>
+                        <li><a href="/category/Interview">সাক্ষাতকার</a></li>
+                        <li><a href="/category/Job-News">চাকরির খবর</a></li>
 
                   </ul></li>
-                <li><a href="category.php?name=Sports">খেলাধুলা</a></li>
+                <li><a href="/category/Sports">খেলাধুলা</a></li>
                 <li><a href="#">অন্যান্য</a>
                   <ul class="dropdown_menu">
-                    <li><a href="category.php?name=Entertainment">বিনোদন</a></li>
-                    <li><a href="category.php?name=Economy">অর্থনীতি</a></li>
-                    <li><a href="category.php?name=Religion">ধর্ম</a></li>
-                    <li><a href="category.php?name=Health">স্বাস্থ্য</a></li>
-                    <li><a href="category.php?name=Literature">সাহিত্য</a></li>
-                    <li><a href="category.php?name=Innovations">উদ্ভাবন</a>
+                    <li><a href="/category/Entertainment">বিনোদন</a></li>
+                    <li><a href="/category/Economy">অর্থনীতি</a></li>
+                    <li><a href="/category/Religion">ধর্ম</a></li>
+                    <li><a href="/category/Health">স্বাস্থ্য</a></li>
+                    <li><a href="/category/Literature">সাহিত্য</a></li>
+                    <li><a href="/category/Innovations">উদ্ভাবন</a>
                     </li>
                   </ul>
                 </li>
@@ -318,10 +326,12 @@
               //$content = mb_substr($row['content'], 0, 200);
               $idx = $row['id'];
               $heading = $row['heading'];
+              $heading2 = $row['heading'];
+              $urlx = str_replace(" ", "-", $heading2);
               //$main = $row['mainNews'];
               //$file = $row['file_name'];
          ?>
-          <i class="fa fa-angle-double-right" ></i> <a href="details.php?id=<?php echo $idx;?>" class="scroll"><?php echo $heading; ?> </a>
+          <i class="fa fa-angle-double-right" ></i> <a href="/details/<?php echo $urlx;?>/<?php echo $idx;?>" class="scroll"><?php echo $heading; ?> </a>
           <?php
              }
           } 
@@ -344,6 +354,7 @@
     </marquee>-->
 
 <div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v5.0&appId=849170395414923&autoLogAppEvents=1"></script>
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
   if (d.getElementById(id)) return;
@@ -364,6 +375,7 @@
       //$newsid = $row['id'];
       $content = nl2br($row['content']);
       $heading = $row['heading'];
+      $urlz = str_replace(" ", "-", $heading);
       $writer = $row['writer'];
       $main = $row['mainNews'];
       $file = $row['file_name'];
@@ -414,7 +426,7 @@
 ?>
 <div class="blog_box_wrapper blog_box_padding">
   <div class="blog_img_wraper blog_img_wraper_2"> 
-    <img alt="" src="posts/<?php echo $file;?>"> 
+    <img alt="" src="https://www.varsityvoice.net/posts/<?php echo $file;?>"> 
   </div>
   <div class="blog_icon_overlay">
     <ul>
@@ -425,7 +437,7 @@
 
   <div class="btc_blog_cate_cont_wrapper">
     
-    <div class="fb-share-button tb_btm_link_right" data-href="https://www.varsityvoice.net/details.php?id=<?php echo $newsid;?>" data-layout="button_count" data-size="large" data-mobile-iframe="true"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.varsityvoice.net%2Fdetails.php%3Fid%3D<?php echo $newsid;?>&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
+    <div class="fb-share-button tb_btm_link_right" data-href="https://www.varsityvoice.net/details/<?php echo $urlz;?>/<?php echo $newsid;?>" data-layout="button_count" data-size="large" data-mobile-iframe="true"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.varsityvoice.net%2Fdetails.php%3Fid%3D<?php echo $newsid;?>&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
     <h5 style="font-family: Bangla,sans-serif; font-size: 26px;"><?php echo $heading; ?></h5>
     <p style="font-size: 16px; font-family: Bangla,sans-serif; font-weight: bold;"><?php if(!empty($writer)){
         ?> <?php echo $writer; ?> <?php } ?> <span style="font-size: 12px;"><?php echo $date;?> <?php echo $mname; ?>, <?php echo $year; ?></span></p>
@@ -445,7 +457,7 @@
       <div class="tb_btm_link_right">
         <ul>
           <li><b>Share :</b></li>
-          <li><a style="color:blue;" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.varsityvoice.net%2Fdetails.php%3Fid%3D<?php echo $newsid;?>&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore"><i class="fa fa-facebook"></i></a></li>
+          <li><a style="color:blue;" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.varsityvoice.net%2F<?php echo $urlz;?>/<?php echo $newsid;?>&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore"><i class="fa fa-facebook"></i></a></li>
           <li><a href="#" style="color: #0A84FF;"><i class="fa fa-twitter"></i></a></li>
           <li><a href="#" style="color: red;"><i class="fa fa-youtube-play"></i></a></li>
           <li><a href="#" style="color: blue;"><i class="fa fa-linkedin"></i></a></li>
@@ -515,7 +527,7 @@ else{
 ?>
   <div class="blog_box_wrapper blog_box_padding">
   <div class="blog_img_wraper blog_img_wraper_2"> 
-    <img alt="" src="posts/<?php echo $file;?>"> 
+    <img alt="" src="https://www.varsityvoice.net/posts/<?php echo $file;?>"> 
   </div>
   <div class="blog_icon_overlay">
     <ul>
@@ -580,6 +592,7 @@ else{
                 while($row = mysqli_fetch_array($rn)){
                   $ids = $row['id'];
                   $heading = $row['heading'];
+                  $urls = str_replace(" ", "-", $heading);
                   $main = $row['mainNews'];
                   $file = $row['file_name'];
                   $pdate = $row['time'];
@@ -628,9 +641,9 @@ else{
             ?>      
             
                   <div class="blog_wrapper2">
-                    <div class="sc_blog_image"> <a href="details.php?id=<?php echo $ids; ?>" style="font-family: Bangla,sans-serif"><img alt="blog_img1" class="img-responsive" src="posts/<?php echo $file; ?>" width="80px"></a> </div>
+                    <div class="sc_blog_image"> <a href="/details/<?php echo $urls; ?>/<?php echo $ids; ?>" style="font-family: Bangla,sans-serif"><img alt="blog_img1" class="img-responsive" src="https://www.varsityvoice.net/posts/<?php echo $file; ?>" width="80px"></a> </div>
                     <div class="sc_blog_text">
-                      <h5><a href="details.php?id=<?php echo $ids; ?>" style="font-family: Bangla,sans-serif"><?php echo $heading; ?></a></h5>
+                      <h5><a href="/details/<?php echo $urls; ?>/<?php echo $ids; ?>" style="font-family: Bangla,sans-serif"><?php echo $heading; ?></a></h5>
                       <div class="sc_blog_date"><span style="color: #7f7f7f"><?php echo $ptime; ?>,</span> <?php echo $date;?> <?php echo $mname; ?>'<?php echo $year;?></div>
                     </div>
                   </div>
@@ -656,7 +669,7 @@ else{
 <div class="container">
 <div class="row">
 <div class="col-xl-3 col-md-3">
-  <h4 style="padding: 5px 6px; border-bottom: 1px solid #7f7f7f;font-family:Bangla,sans-serif;"><a class="keyCategory" href="category.php?name=Success%20Story">সফলতার গল্প
+  <h4 style="padding: 5px 6px; border-bottom: 1px solid #7f7f7f;font-family:Bangla,sans-serif;"><a class="keyCategory" href="/category/Success-Story">সফলতার গল্প
 </a></h4>
 
     <?php
@@ -667,6 +680,8 @@ else{
       $row = mysqli_fetch_array($qr);
       $newsid = $row['id'];
       $heading = mb_substr($row['heading'], 0, 140);
+      $heading2 = $row['heading'];
+      $urlx = str_replace(" ", "-", $heading2);
       $file = $row['file_name'];
       
   ?>
@@ -678,9 +693,9 @@ else{
 
     
   ?>
-  <img alt="" src="posts/<?php echo $file; ?>" width="100%">
+  <img alt="" src="https://www.varsityvoice.net/posts/<?php echo $file; ?>" width="100%">
   <div style="padding: 0px 10px; padding-top: 10px;">
-    <a class="newscategory" href="details.php?id=<?php echo $newsid; ?>"><h5 style="font-family: Bangla,sans-serif"><?php echo $heading; ?></h5></a>
+    <a class="newscategory" href="/details/<?php echo $urlx; ?>/<?php echo $newsid; ?>"><h5 style="font-family: Bangla,sans-serif"><?php echo $heading; ?></h5></a>
   </div>
   
   
@@ -693,6 +708,8 @@ else{
       $row = mysqli_fetch_array($qr);
       $newsid = $row['id'];
       $heading = mb_substr($row['heading'], 0, 140);
+      $heading2 = $row['heading'];
+      $urlx = str_replace(" ", "-", $heading2);
       $file = $row['file_name'];
       
   ?>
@@ -704,7 +721,7 @@ else{
   
   <div style="padding: 0px 10px; ">
     <hr>
-    <a class="newscategory" href="details.php?id=<?php echo $newsid; ?>"><h5 style="font-family: Bangla,sans-serif"><?php echo $heading; ?></h5></a>
+    <a class="newscategory" href="/details/<?php echo $urlx; ?>/<?php echo $newsid; ?>"><h5 style="font-family: Bangla,sans-serif"><?php echo $heading; ?></h5></a>
   </div>
   
   <?php
@@ -721,7 +738,7 @@ else{
 
 </div>
 <div class="col-xl-3 col-md-3">
-  <h4 style="padding: 5px 6px; border-bottom: 1px solid #7f7f7f;font-family:Bangla,sans-serif;"><a class="keyCategory" href="category.php?name=Scholarship">স্কলারশিপ</a></h4>
+  <h4 style="padding: 5px 6px; border-bottom: 1px solid #7f7f7f;font-family:Bangla,sans-serif;"><a class="keyCategory" href="/category/Scholarship">স্কলারশিপ</a></h4>
     <?php
     $qr = mysqli_query($con,"SELECT * FROM contents WHERE category = 'Scholarship' ORDER BY time DESC Limit 1");
     if(mysqli_num_rows($qr)>0){
@@ -730,6 +747,8 @@ else{
       $row = mysqli_fetch_array($qr);
       $newsid = $row['id'];
       $heading = mb_substr($row['heading'], 0, 140);
+      $heading2 = $row['heading'];
+      $urlx = str_replace(" ", "-", $heading2);
       $file = $row['file_name'];
       
   ?>
@@ -741,9 +760,9 @@ else{
 
     
   ?>
-  <img alt="" src="posts/<?php echo $file; ?>" width="100%">
+  <img alt="" src="https://www.varsityvoice.net/posts/<?php echo $file; ?>" width="100%">
   <div style="padding: 0px 10px; padding-top: 10px;">
-    <a class="newscategory" href="details.php?id=<?php echo $newsid; ?>"><h5 style="font-family: Bangla,sans-serif"><?php echo $heading; ?></h5></a>
+    <a class="newscategory" href="/details/<?php echo $urlx; ?>/<?php echo $newsid; ?>"><h5 style="font-family: Bangla,sans-serif"><?php echo $heading; ?></h5></a>
   </div>
   
   
@@ -756,6 +775,8 @@ else{
       $row = mysqli_fetch_array($qr);
       $newsid = $row['id'];
       $heading = mb_substr($row['heading'], 0, 140);
+      $heading2 = $row['heading'];
+      $urlx = str_replace(" ", "-", $heading2);
       $file = $row['file_name'];
       
   ?>
@@ -767,7 +788,7 @@ else{
   
   <div style="padding: 0px 10px; ">
     <hr>
-    <a class="newscategory" href="details.php?id=<?php echo $newsid; ?>"><h5 style="font-family: Bangla,sans-serif"><?php echo $heading; ?></h5></a>
+    <a class="newscategory" href="/details/<?php echo $urlx; ?>/<?php echo $newsid; ?>"><h5 style="font-family: Bangla,sans-serif"><?php echo $heading; ?></h5></a>
   </div>
   
   <?php
@@ -784,7 +805,7 @@ else{
 
 </div>
 <div class="col-xl-3 col-md-3">
-    <h4 style="padding: 5px 6px; border-bottom: 1px solid #7f7f7f;font-family:Bangla,sans-serif;"><a class="keyCategory" href="category.php?name=Job%20News">চাকরির খবর</a></h4>
+    <h4 style="padding: 5px 6px; border-bottom: 1px solid #7f7f7f;font-family:Bangla,sans-serif;"><a class="keyCategory" href="/category/Job-News">চাকরির খবর</a></h4>
     <?php
     $qr = mysqli_query($con,"SELECT * FROM contents WHERE category = 'Job News' ORDER BY time DESC Limit 1");
     if(mysqli_num_rows($qr)>0){
@@ -793,6 +814,8 @@ else{
       $row = mysqli_fetch_array($qr);
       $newsid = $row['id'];
       $heading = mb_substr($row['heading'], 0, 140);
+      $heading2 = $row['heading'];
+      $urlx = str_replace(" ", "-", $heading2);
       $file = $row['file_name'];
       
   ?>
@@ -804,9 +827,9 @@ else{
 
     
   ?>
-  <img alt="" src="posts/<?php echo $file; ?>" width="100%">
+  <img alt="" src="https://www.varsityvoice.net/posts/<?php echo $file; ?>" width="100%">
   <div style="padding: 0px 10px; padding-top: 10px;">
-    <a class="newscategory" href="details.php?id=<?php echo $newsid; ?>"><h5 style="font-family: Bangla,sans-serif"><?php echo $heading; ?></h5></a>
+    <a class="newscategory" href="/details/<?php echo $urlx; ?>/<?php echo $newsid; ?>"><h5 style="font-family: Bangla,sans-serif"><?php echo $heading; ?></h5></a>
   </div>
   
   
@@ -819,6 +842,8 @@ else{
       $row = mysqli_fetch_array($qr);
       $newsid = $row['id'];
       $heading = mb_substr($row['heading'], 0, 140);
+      $heading2 = $row['heading'];
+      $urlx = str_replace(" ", "-", $heading2);
       $file = $row['file_name'];
       
   ?>
@@ -830,7 +855,7 @@ else{
   
   <div style="padding: 0px 10px; ">
     <hr>
-    <a class="newscategory" href="details.php?id=<?php echo $newsid; ?>"><h5 style="font-family: Bangla,sans-serif"><?php echo $heading; ?></h5></a>
+    <a class="newscategory" href="/details/<?php echo $urlx; ?>/<?php echo $newsid; ?>"><h5 style="font-family: Bangla,sans-serif"><?php echo $heading; ?></h5></a>
   </div>
   
   <?php
@@ -847,7 +872,7 @@ else{
 
 </div>
 <div class="col-xl-3 col-md-3">
-    <h4 style="padding: 5px 6px; border-bottom: 1px solid #7f7f7f;font-family:Bangla,sans-serif;"><a class="keyCategory" href="category.php?name=Public%20University">পাবলিক ভার্সিটি
+    <h4 style="padding: 5px 6px; border-bottom: 1px solid #7f7f7f;font-family:Bangla,sans-serif;"><a class="keyCategory" href="/category/Public-University">পাবলিক ভার্সিটি
 </a></h4>
     <?php
     $qr = mysqli_query($con,"SELECT * FROM contents WHERE category = 'Public University' ORDER BY time DESC Limit 1");
@@ -857,6 +882,8 @@ else{
       $row = mysqli_fetch_array($qr);
       $newsid = $row['id'];
       $heading = mb_substr($row['heading'], 0, 140);
+      $heading2 = $row['heading'];
+      $urlx = str_replace(" ", "-", $heading2);
       $file = $row['file_name'];
       
   ?>
@@ -868,9 +895,9 @@ else{
 
     
   ?>
-  <img alt="" src="posts/<?php echo $file; ?>" width="100%">
+  <img alt="" src="https://www.varsityvoice.net/posts/<?php echo $file; ?>" width="100%">
   <div style="padding: 0px 10px; padding-top: 10px;">
-    <a class="newscategory" href="details.php?id=<?php echo $newsid; ?>"><h5 style="font-family: Bangla,sans-serif"><?php echo $heading; ?></h5></a>
+    <a class="newscategory" href="/details/<?php echo $urlx; ?>/<?php echo $newsid; ?>"><h5 style="font-family: Bangla,sans-serif"><?php echo $heading; ?></h5></a>
   </div>
   
   
@@ -883,6 +910,8 @@ else{
       $row = mysqli_fetch_array($qr);
       $newsid = $row['id'];
       $heading = mb_substr($row['heading'], 0, 140);
+      $heading2 = $row['heading'];
+      $urlx = str_replace(" ", "-", $heading2);
       $file = $row['file_name'];
       
   ?>
@@ -894,7 +923,7 @@ else{
   
   <div style="padding: 0px 10px; ">
     <hr>
-    <a class="newscategory" href="details.php?id=<?php echo $newsid; ?>"><h5 style="font-family: Bangla,sans-serif"><?php echo $heading; ?></h5></a>
+    <a class="newscategory" href="/details/<?php echo $urlx; ?>/<?php echo $newsid; ?>"><h5 style="font-family: Bangla,sans-serif"><?php echo $heading; ?></h5></a>
   </div>
   
   <?php
@@ -919,7 +948,7 @@ else{
 <div class="container">
 <div class="row">
 <div class="col-xl-3 col-md-3">
-  <h4 style="padding: 5px 6px; border-bottom: 1px solid #7f7f7f;font-family:Bangla,sans-serif;"><a class="keyCategory" href="category.php?name=Science%20and%20Technology">বিজ্ঞান ও প্রযুক্তি
+  <h4 style="padding: 5px 6px; border-bottom: 1px solid #7f7f7f;font-family:Bangla,sans-serif;"><a class="keyCategory" href="/category/Science-and-Technology">বিজ্ঞান ও প্রযুক্তি
 </a></h4>
   <?php
     $qr = mysqli_query($con,"SELECT * FROM contents WHERE category = 'Science and Technology' ORDER BY time DESC Limit 1");
@@ -929,6 +958,8 @@ else{
       $row = mysqli_fetch_array($qr);
       $newsid = $row['id'];
       $heading = mb_substr($row['heading'], 0, 140);
+      $heading2 = $row['heading'];
+      $urlx = str_replace(" ", "-", $heading2);
       $file = $row['file_name'];
       
   ?>
@@ -940,9 +971,9 @@ else{
 
     
   ?>
-  <img alt="" src="posts/<?php echo $file; ?>" width="100%">
+  <img alt="" src="https://www.varsityvoice.net/posts/<?php echo $file; ?>" width="100%">
   <div style="padding: 0px 10px; padding-top: 10px;">
-    <a class="newscategory" href="details.php?id=<?php echo $newsid; ?>"><h5 style="font-family: Bangla,sans-serif"><?php echo $heading; ?></h5></a>
+    <a class="newscategory" href="/details/<?php echo $urlx; ?>/<?php echo $newsid; ?>"><h5 style="font-family: Bangla,sans-serif"><?php echo $heading; ?></h5></a>
   </div>
   
   
@@ -955,6 +986,8 @@ else{
       $row = mysqli_fetch_array($qr);
       $newsid = $row['id'];
       $heading = mb_substr($row['heading'], 0, 140);
+      $heading2 = $row['heading'];
+      $urlx = str_replace(" ", "-", $heading2);
       $file = $row['file_name'];
       
   ?>
@@ -966,7 +999,7 @@ else{
   
   <div style="padding: 0px 10px; ">
     <hr>
-    <a class="newscategory" href="details.php?id=<?php echo $newsid; ?>"><h5 style="font-family: Bangla,sans-serif"><?php echo $heading; ?></h5></a>
+    <a class="newscategory" href="/details/<?php echo $urlx; ?>/<?php echo $newsid; ?>"><h5 style="font-family: Bangla,sans-serif"><?php echo $heading; ?></h5></a>
   </div>
   
   <?php
@@ -983,7 +1016,7 @@ else{
 
 </div>
 <div class="col-xl-3 col-md-3">
-    <h4 style="padding: 5px 6px; border-bottom: 1px solid #7f7f7f;font-family:Bangla,sans-serif;"><a class="keyCategory" href="category.php?name=Innovations">উদ্ভাবন</a></h4>
+    <h4 style="padding: 5px 6px; border-bottom: 1px solid #7f7f7f;font-family:Bangla,sans-serif;"><a class="keyCategory" href="/category/Innovations">উদ্ভাবন</a></h4>
     <?php
     $qr = mysqli_query($con,"SELECT * FROM contents WHERE category = 'Innovations' ORDER BY time DESC Limit 1");
     if(mysqli_num_rows($qr)>0){
@@ -992,6 +1025,8 @@ else{
       $row = mysqli_fetch_array($qr);
       $newsid = $row['id'];
       $heading = mb_substr($row['heading'], 0, 140);
+      $heading2 = $row['heading'];
+      $urlx = str_replace(" ", "-", $heading2);
       $file = $row['file_name'];
       
   ?>
@@ -1003,9 +1038,9 @@ else{
 
     
   ?>
-  <img alt="" src="posts/<?php echo $file; ?>" width="100%">
+  <img alt="" src="https://www.varsityvoice.net/posts/<?php echo $file; ?>" width="100%">
   <div style="padding: 0px 10px; padding-top: 10px;">
-    <a class="newscategory" href="details.php?id=<?php echo $newsid; ?>"><h5 style="font-family: Bangla,sans-serif"><?php echo $heading; ?></h5></a>
+    <a class="newscategory" href="/details/<?php echo $urlx; ?>/<?php echo $newsid; ?>"><h5 style="font-family: Bangla,sans-serif"><?php echo $heading; ?></h5></a>
   </div>
   
   
@@ -1018,6 +1053,8 @@ else{
       $row = mysqli_fetch_array($qr);
       $newsid = $row['id'];
       $heading = mb_substr($row['heading'], 0, 140);
+      $heading2 = $row['heading'];
+      $urlx = str_replace(" ", "-", $heading2);
       $file = $row['file_name'];
       
   ?>
@@ -1029,7 +1066,7 @@ else{
   
   <div style="padding: 0px 10px; ">
     <hr>
-    <a class="newscategory" href="details.php?id=<?php echo $newsid; ?>"><h5 style="font-family: Bangla,sans-serif"><?php echo $heading; ?></h5></a>
+    <a class="newscategory" href="/details/<?php echo $urlx; ?>/<?php echo $newsid; ?>"><h5 style="font-family: Bangla,sans-serif"><?php echo $heading; ?></h5></a>
   </div>
   
   <?php
@@ -1048,7 +1085,7 @@ else{
 
 </div>
 <div class="col-xl-3 col-md-3">
-  <h4 style="padding: 5px 6px; border-bottom: 1px solid #7f7f7f;font-family:Bangla,sans-serif;"><a class="keyCategory" href="category.php?name=Entertainment">
+  <h4 style="padding: 5px 6px; border-bottom: 1px solid #7f7f7f;font-family:Bangla,sans-serif;"><a class="keyCategory" href="/category/Entertainment">
 বিনোদন</a></h4>
     <?php
     $qr = mysqli_query($con,"SELECT * FROM contents WHERE category = 'Entertainment' ORDER BY time DESC Limit 1");
@@ -1058,6 +1095,8 @@ else{
       $row = mysqli_fetch_array($qr);
       $newsid = $row['id'];
       $heading = mb_substr($row['heading'], 0, 140);
+      $heading2 = $row['heading'];
+      $urlx = str_replace(" ", "-", $heading2);
       $file = $row['file_name'];
       
   ?>
@@ -1069,9 +1108,9 @@ else{
 
     
   ?>
-  <img alt="" src="posts/<?php echo $file; ?>" width="100%">
+  <img alt="" src="https://www.varsityvoice.net/posts/<?php echo $file; ?>" width="100%">
   <div style="padding: 0px 10px; padding-top: 10px;">
-    <a class="newscategory" href="details.php?id=<?php echo $newsid; ?>"><h5 style="font-family: Bangla,sans-serif"><?php echo $heading; ?></h5></a>
+    <a class="newscategory" href="/details/<?php echo $urlx; ?>/<?php echo $newsid; ?>"><h5 style="font-family: Bangla,sans-serif"><?php echo $heading; ?></h5></a>
   </div>
   
   
@@ -1084,6 +1123,8 @@ else{
       $row = mysqli_fetch_array($qr);
       $newsid = $row['id'];
       $heading = mb_substr($row['heading'], 0, 140);
+      $heading2 = $row['heading'];
+      $urlx = str_replace(" ", "-", $heading2);
       $file = $row['file_name'];
       
   ?>
@@ -1095,7 +1136,7 @@ else{
   
   <div style="padding: 0px 10px; ">
     <hr>
-    <a class="newscategory" href="details.php?id=<?php echo $newsid; ?>"><h5 style="font-family: Bangla,sans-serif"><?php echo $heading; ?></h5></a>
+    <a class="newscategory" href="/details/<?php echo $urlx; ?>/<?php echo $newsid; ?>"><h5 style="font-family: Bangla,sans-serif"><?php echo $heading; ?></h5></a>
   </div>
   
   <?php
@@ -1113,7 +1154,7 @@ else{
 
 </div>
 <div class="col-xl-3 col-md-3">
-  <h4 style="padding: 5px 6px; border-bottom: 1px solid #7f7f7f;font-family:Bangla,sans-serif;"><a class="keyCategory" href="category.php?name=Religion">ধর্ম</a></h4>
+  <h4 style="padding: 5px 6px; border-bottom: 1px solid #7f7f7f;font-family:Bangla,sans-serif;"><a class="keyCategory" href="/category/Religion">ধর্ম</a></h4>
   <?php
     $qr = mysqli_query($con,"SELECT * FROM contents WHERE category = 'Religion' ORDER BY time DESC Limit 1");
     if(mysqli_num_rows($qr)>0){
@@ -1122,6 +1163,8 @@ else{
       $row = mysqli_fetch_array($qr);
       $newsid = $row['id'];
       $heading = mb_substr($row['heading'], 0, 140);
+      $heading2 = $row['heading'];
+      $urlx = str_replace(" ", "-", $heading2);
       $file = $row['file_name'];
       
   ?>
@@ -1133,9 +1176,9 @@ else{
 
     
   ?>
-  <img alt="" src="posts/<?php echo $file; ?>" width="100%">
+  <img alt="" src="https://www.varsityvoice.net/posts/<?php echo $file; ?>" width="100%">
   <div style="padding: 0px 10px; padding-top: 10px;">
-    <a class="newscategory" href="details.php?id=<?php echo $newsid; ?>"><h5 style="font-family: Bangla,sans-serif"><?php echo $heading; ?></h5></a>
+    <a class="newscategory" href="/details/<?php echo $urlx; ?>/<?php echo $newsid; ?>"><h5 style="font-family: Bangla,sans-serif"><?php echo $heading; ?></h5></a>
   </div>
   
   
@@ -1148,6 +1191,8 @@ else{
       $row = mysqli_fetch_array($qr);
       $newsid = $row['id'];
       $heading = mb_substr($row['heading'], 0, 140);
+      $heading2 = $row['heading'];
+      $urlx = str_replace(" ", "-", $heading2);
       $file = $row['file_name'];
       
   ?>
@@ -1159,7 +1204,7 @@ else{
   
   <div style="padding: 0px 10px; ">
     <hr>
-    <a class="newscategory" href="details.php?id=<?php echo $newsid; ?>"><h5 style="font-family: Bangla,sans-serif"><?php echo $heading; ?></h5></a>
+    <a class="newscategory" href="/details/<?php echo $urlx; ?>/<?php echo $newsid; ?>"><h5 style="font-family: Bangla,sans-serif"><?php echo $heading; ?></h5></a>
   </div>
   
   <?php

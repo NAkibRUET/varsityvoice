@@ -7,7 +7,7 @@
     else{
         header('Location: login');
     }
-    function generateRandomString($length = 6) {
+    function generateRandomString($length = 32) {
         $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
         $charactersLength = strlen($characters);
         $randomString = '';
@@ -69,7 +69,7 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item">
-            <a class="nav-link" href="index2.php" tabindex="-1" aria-disabled="true">Go to Admin Panel 2</a>
+            <a class="nav-link" href="index.php" tabindex="-1" aria-disabled="true">Go to Admin Panel 1</a>
           </li>
         </ul>
         <form action="logout.php">
@@ -146,9 +146,9 @@
                 <?php if(isset($content))echo $content?>
                 
             </textarea>
-            <!--<script>
+            <script>
                         CKEDITOR.replace( 'content' );
-            </script>-->
+            </script>
             <label>Show as Main News?</label>
             <select class="form-control" name="mainNews">
                 <option value="Yes"<?php if(isset($mainNews) && $mainNews=="Yes")echo "selected";?>>Yes</option>

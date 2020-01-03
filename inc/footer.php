@@ -7,7 +7,7 @@
     <div class="row">
       <div class="col-xl-4 col-md-6">
         <div class="footer-text"> <a class="footer-logo" href="index.php">Varsity<span>Voice</span></a>
-          <img style="margin-left:12px; " src="rsz_logo.jpg" width="100px">
+          <img style="margin-left:12px; " src="https://www.varsityvoice.net/logoxxx.jpg" width="100px">
           <div  style="margin-left:6px; " class="social-icons"> <a href="javascript:void(0)" class="bttn"> <i class="fa fa-twitter"></i> </a> <a href="javascript:void(0)" class="bttn"><i class="fa fa-linkedin"></i></a> <a href="https://www.facebook.com/varsityvoicebd/" class="bttn"> <i class="fa fa-facebook"></i> </a> <a href="javascript:void(0)" class="bttn"> <i class="fa fa-skype"></i> </a> <a href="javascript:void(0)" class="bttn"> <i class="fa fa-pinterest-p"></i> </a> </div>
         </div>
       </div>
@@ -15,7 +15,7 @@
         <div class="links">
           <h3>Links</h3>
           <ul class="">
-            <li><a href="index.php">Home</a></li>
+            <li><a href="https://www.varsityvoice.net">Home</a></li>
             <li><a href="#">About Us</a></li>
             <li><a href="#">Services</a></li>
             <li><a href="#">Gallery</a></li>
@@ -26,10 +26,10 @@
         <div class="location">
           <h3>Location</h3>
           <ul>
-            <li>Dhaka, Bangladesh</li>
-            <li><i class="fa fa-phone"></i> <a href="#">+8801521494177</a></li>
-            <li><i class="fa fa-envelope"></i> <a href="mailto:"> info@varsityvoice.net </a></li>
-            <li><i class="fa fa-envelope"></i> <a href="mailto:"> admin@varsityvoice.net </a></li>
+            <li>House # 498,Road # 10
+West Nakhalpara,Dhaka-1215</li>
+            <li><i class="fa fa-phone"></i> <a href="tel:+8801521494177">+8801521494177</a></li>
+            <li><i class="fa fa-envelope"></i> <a href="mailto:varsityvoice.net@gmail.com"> varsityvoice.net@gmail.com </a></li>
           </ul>
         </div>
       </div>
@@ -53,16 +53,16 @@
 
 <!-- Footer Wrapper End --> 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
-<script src="assets/jquery/jquery-min.js"></script> 
-<script src="assets/jquery/plugins.js"></script> 
-<script src="assets/jquery/jquery.animateNumber.min.js"></script> 
-<script src="assets/bootstrap/js/bootstrap.min.js"></script> 
-<script src="assets/owl-carousel/js/owl.carousel.min.js"></script> 
-<script src="assets/wow/wow.min.js"></script> 
-<script src="assets/jquery/jquery.mainmenu.js"></script> 
-<script src="assets/jquery/jquery.nivo.slider.pack.js"></script> 
-<script src="assets/jquery/magnific-popup.min.js"></script> 
-<script src="js/custom.js"></script>
+<script src="https://www.varsityvoice.net/assets/jquery/jquery-min.js"></script> 
+<script src="https://www.varsityvoice.net/assets/jquery/plugins.js"></script> 
+<script src="https://www.varsityvoice.net/assets/jquery/jquery.animateNumber.min.js"></script> 
+<script src="https://www.varsityvoice.net/assets/bootstrap/js/bootstrap.min.js"></script> 
+<script src="https://www.varsityvoice.net/assets/owl-carousel/js/owl.carousel.min.js"></script> 
+<script src="https://www.varsityvoice.net/assets/wow/wow.min.js"></script> 
+<script src="https://www.varsityvoice.net/assets/jquery/jquery.mainmenu.js"></script> 
+<script src="https://www.varsityvoice.net/assets/jquery/jquery.nivo.slider.pack.js"></script> 
+<script src="https://www.varsityvoice.net/assets/jquery/magnific-popup.min.js"></script> 
+<script src="https://www.varsityvoice.net/js/custom.js"></script>
 
 </body>
 </html>

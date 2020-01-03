@@ -1,17 +1,22 @@
 <?php
   require_once('db_connect.php');
-  
+  $actual_link = $_SERVER[REQUEST_URI];
+  $actual_link = str_replace("/category/", "", $actual_link);
+  $actual_link = str_replace("/", "", $actual_link);
+  if($actual_link==""){
+      $actual_link = "Home";
+  }
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>Home | VarsityVoice</title>
+<title><?php echo $actual_link;?> | VarsityVoice</title>
 
 
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="description" content="Varsity Voice Online Newspaper"/>
-<meta name="keywords" content="Varsity, Varsity Voice, varsityvoice, university news, popular bangla newspaper, daily news paper, breaking news, current news, online bangla newspaper, online paper, all bangla news paper, bd news, bangladeshi potrika, bangladeshi news portal, all bangla newspaper, bangla news, bd newspaper, bangla news 24, live sports, polities, entertainment, lifestyle, country news, ভার্সিটি ভয়েস, ভার্সিটি, জাতীয়, আন্তর্জাতিক, ছাত্র রাজনীতি, বিজ্ঞান ও প্রযুক্তি, স্কলারশিপ, চাকরির খবর, ক্যারিয়ার, খেলাধুলা, বিনোদন, অর্থনীতি" />
+<meta name="keywords" content="varsity, varsity voice, varsityvoice, versity, versityvoice, university news, popular bangla newspaper, daily news paper, breaking news, current news, online bangla newspaper, online paper, all bangla news paper, bd news, bangladeshi potrika, bangladeshi news portal, all bangla newspaper, bangla news, polities, entertainment, lifestyle, country news, ভার্সিটি ভয়েস, ভার্সিটি, জাতীয়, আন্তর্জাতিক, ছাত্র রাজনীতি, বিজ্ঞান ও প্রযুক্তি, স্কলারশিপ, চাকরির খবর, ক্যারিয়ার, খেলাধুলা, বিনোদন, অর্থনীতি ,বিশ্ববিদ্যালয়,বিশ্ববিদ্যালয়ে" />
 <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
 <!-- Bootstrap CSS -->
@@ -23,11 +28,11 @@
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
 <!--<link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">-->
 <!-- Custom CSS -->
-<link href="css/style.css" rel="stylesheet">
+<link href="https://www.varsityvoice.net/css/style.css" rel="stylesheet">
 <!-- Colors CSS -->
-<link href="css/one.css" id="style_theme" rel="stylesheet">
+<link href="https://www.varsityvoice.net/css/one.css" id="style_theme" rel="stylesheet">
 <!-- Favicon -->
-<link rel="shortcut icon" type="image/x-icon" href="logoxxx.jpg">
+<link rel="shortcut icon" type="image/x-icon" href="https://www.varsityvoice.net/logoxxx.jpg">
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 <!--[if lt IE 9]>
@@ -108,7 +113,7 @@
     <div class="row">
       <div class="col-xl-2 col-lg-2 col-md-4">
         <div class="logo-design" style="margin-top: -10px; margin-bottom:-6px;"> 
-          <img src="logoxxx.jpg" width="90%">
+          <img src="https://www.varsityvoice.net/logoxxx.jpg" width="90%">
         </div>
       </div>
       <div class="col-xl-10 col-lg-10 col-md-8 d-none d-lg-block d-md-block">
@@ -187,36 +192,36 @@
                 <li><a href="https://www.varsityvoice.net"><i class="fa fa-home"></i> হোম</a></li>
                 <li><a href="#">ভার্সিটি<i class="fa fa-angle-down"></i></a>
                   <ul class="dropdown_menu">
-                    <li><a href="/Public-University">পাবলিক ভার্সিটি</a></li>
-                    <li><a href="/Private-University">প্রাইভেট ভার্সিটি</a></li>                  
+                    <li><a href="/category/Public-University">পাবলিক ভার্সিটি</a></li>
+                    <li><a href="/category/Private-University">প্রাইভেট ভার্সিটি</a></li>                  
                   </ul>
                 </li>
-                <li><a href="/National">জাতীয়</a></li>
-                <li><a href="/International">আন্তর্জাতিক</a></li>
+                <li><a href="/category/National">জাতীয়</a></li>
+                <li><a href="/category/International">আন্তর্জাতিক</a></li>
                 
-                <li><a href="/Student-Politics">ছাত্র রাজনীতি</a>
+                <li><a href="/category/Student-Politics">ছাত্র রাজনীতি</a>
                 </li>       
-                <li ><a href="/Science-and-Technology">বিজ্ঞান ও প্রযুক্তি</i></a>
+                <li ><a href="/category/Science-and-Technology">বিজ্ঞান ও প্রযুক্তি</i></a>
                 </li>
-                <li><a href="/Scholarship">স্কলারশিপ</a></li>
+                <li><a href="/category/Scholarship">স্কলারশিপ</a></li>
                         
-                <li><a href="/Admission">এডমিশন</a></li>
+                <li><a href="/category/Admission">এডমিশন</a></li>
                 <li><a href="#">ক্যারিয়ার <i class="fa fa-angle-down"></i></a><ul class="dropdown_menu">
-                        <li><a href="/Success-Story">সফলতার গল্প</a>
+                        <li><a href="/category/Success-Story">সফলতার গল্প</a>
                         </li>
-                        <li><a href="/Interview">সাক্ষাতকার</a></li>
-                        <li><a href="/Job-News">চাকরির খবর</a></li>
+                        <li><a href="/category/Interview">সাক্ষাতকার</a></li>
+                        <li><a href="/category/Job-News">চাকরির খবর</a></li>
 
                   </ul></li>
-                <li><a href="/Sports">খেলাধুলা</a></li>
+                <li><a href="/category/Sports">খেলাধুলা</a></li>
                 <li><a href="#">অন্যান্য<i class="fa fa-angle-down"></i></a>
                   <ul class="dropdown_menu">
-                    <li><a href="/Entertainment">বিনোদন</a></li>
-                    <li><a href="/Economy">অর্থনীতি</a></li>
-                    <li><a href="/Religion">ধর্ম</a></li>
-                    <li><a href="/Health">স্বাস্থ্য</a></li>
-                    <li><a href="/Literature">সাহিত্য</a></li>
-                    <li><a href="/Innovations">উদ্ভাবন</a>
+                    <li><a href="/category/Entertainment">বিনোদন</a></li>
+                    <li><a href="/category/Economy">অর্থনীতি</a></li>
+                    <li><a href="/category/Religion">ধর্ম</a></li>
+                    <li><a href="/category/Health">স্বাস্থ্য</a></li>
+                    <li><a href="/category/Literature">সাহিত্য</a></li>
+                    <li><a href="/category/Innovations">উদ্ভাবন</a>
                     </li>
                   </ul>
                 </li>
@@ -243,38 +248,38 @@
                 <li><a href="https://www.varsityvoice.net"><i class="fa fa-home"></i> হোম</a></li>
                 <li><a href="#">ভার্সিটি</a>
                   <ul class="dropdown_menu">
-                    <li><a href="/Public-University">পাবলিক ভার্সিটি</a></li>
-                    <li><a href="/Private-University">প্রাইভেট ভার্সিটি</a></li>
+                    <li><a href="/category/Public-University">পাবলিক ভার্সিটি</a></li>
+                    <li><a href="/category/Private-University">প্রাইভেট ভার্সিটি</a></li>
                     
                     
                   </ul>
                 </li>
-                <li><a href="/National">জাতীয়</a></li>
-                <li><a href="/International">আন্তর্জাতিক</a></li>
+                <li><a href="/category/National">জাতীয়</a></li>
+                <li><a href="/category/International">আন্তর্জাতিক</a></li>
                 
-                <li><a href="/Student-Politics">ছাত্র রাজনীতি</a>
+                <li><a href="/category/Student-Politics">ছাত্র রাজনীতি</a>
                 </li>       
-                <li ><a href="/Science-and-Technology">বিজ্ঞান ও প্রযুক্তি</i></a>
+                <li ><a href="/category/Science-and-Technology">বিজ্ঞান ও প্রযুক্তি</i></a>
                 </li>
-                <li><a href="/Scholarship">স্কলারশিপ</a></li>
+                <li><a href="/category/Scholarship">স্কলারশিপ</a></li>
                         
-                <li><a href="/Admission">এডমিশন</a></li>
+                <li><a href="/category/Admission">এডমিশন</a></li>
                 <li><a href="#">ক্যারিয়ার <i class="fa fa-angle-down"></i></a><ul class="dropdown_menu">
-                        <li><a href="/Success-Story">সফলতার গল্প</a>
+                        <li><a href="/category/Success-Story">সফলতার গল্প</a>
                         </li>
-                        <li><a href="/Interview">সাক্ষাতকার</a></li>
-                        <li><a href="/Job News">চাকরির খবর</a></li>
+                        <li><a href="/category/Interview">সাক্ষাতকার</a></li>
+                        <li><a href="/category/Job News">চাকরির খবর</a></li>
 
                   </ul></li>
-                <li><a href="/Sports">খেলাধুলা</a></li>
+                <li><a href="/category/Sports">খেলাধুলা</a></li>
                 <li><a href="#">অন্যান্য</a>
                   <ul class="dropdown_menu">
-                    <li><a href="/Entertainment">বিনোদন</a></li>
-                    <li><a href="/Economy">অর্থনীতি</a></li>
-                    <li><a href="/Religion">ধর্ম</a></li>
-                    <li><a href="/Health">স্বাস্থ্য</a></li>
-                    <li><a href="/Literature">সাহিত্য</a></li>
-                    <li><a href="/Innovations">উদ্ভাবন</a>
+                    <li><a href="/category/Entertainment">বিনোদন</a></li>
+                    <li><a href="/category/Economy">অর্থনীতি</a></li>
+                    <li><a href="/category/Religion">ধর্ম</a></li>
+                    <li><a href="/category/Health">স্বাস্থ্য</a></li>
+                    <li><a href="/category/Literature">সাহিত্য</a></li>
+                    <li><a href="/category/Innovations">উদ্ভাবন</a>
                     </li>
                   </ul>
                 </li>
@@ -305,10 +310,11 @@
               //$content = mb_substr($row['content'], 0, 200);
               $idx = $row['id'];
               $heading = $row['heading'];
+              $url = str_replace(" ", "-", $heading);
               //$main = $row['mainNews'];
               //$file = $row['file_name'];
          ?>
-          <i class="fa fa-angle-double-right" ></i> <a href="details.php?id=<?php echo $idx;?>" class="scroll"><?php echo $heading; ?> </a>
+          <i class="fa fa-angle-double-right" ></i> <a href="/details/<?php echo $url;?>/<?php echo $idx;?>" class="scroll"><?php echo $heading; ?> </a>
           <?php
              }
           } 
