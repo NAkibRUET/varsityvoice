@@ -4,13 +4,16 @@
 ?>
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="utf-8">
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Home | VarsityVoice</title>
+
+
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="keywords" content="Varsity, Varsity Voice, ভার্সিটি ভয়েস, ভার্সিটি, জাতীয়, আন্তর্জাতিক, ছাত্র রাজনীতি, বিজ্ঞান ও প্রযুক্তি, স্কলারশিপ, চাকরির খবর, ক্যারিয়ার, খেলাধুলা, বিনোদন, অর্থনীতি," />
+<meta name="description" content="Varsity Voice Online Newspaper"/>
+<meta name="keywords" content="Varsity, Varsity Voice, varsityvoice, university news, popular bangla newspaper, daily news paper, breaking news, current news, online bangla newspaper, online paper, all bangla news paper, bd news, bangladeshi potrika, bangladeshi news portal, all bangla newspaper, bangla news, bd newspaper, bangla news 24, live sports, polities, entertainment, lifestyle, country news, ভার্সিটি ভয়েস, ভার্সিটি, জাতীয়, আন্তর্জাতিক, ছাত্র রাজনীতি, বিজ্ঞান ও প্রযুক্তি, স্কলারশিপ, চাকরির খবর, ক্যারিয়ার, খেলাধুলা, বিনোদন, অর্থনীতি" />
 <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-<title>Varsity Voice</title>
+
 <!-- Bootstrap CSS -->
 
     
@@ -24,13 +27,28 @@
 <!-- Colors CSS -->
 <link href="css/one.css" id="style_theme" rel="stylesheet">
 <!-- Favicon -->
-<link rel="shortcut icon" type="image/x-icon" href="logo.jpg">
+<link rel="shortcut icon" type="image/x-icon" href="logoxxx.jpg">
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <!--<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({
+              google_ad_client: "ca-pub-9176548633574786",
+              enable_page_level_ads: true
+         });
+    </script>-->
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({
+        google_ad_client: "ca-pub-6757398403735844",
+        enable_page_level_ads: true
+      });
+    </script>
+    
   <style type="text/css">
     
     .scroll{
@@ -50,7 +68,7 @@
       color:#000;
     }
     .newscategory:hover{
-      color:#EA0107;
+      color:#D23136;
     }
 
   </style>
@@ -72,8 +90,9 @@
         <div class="top-right-menu">
           <ul class="social-icons text-right">
             <li><a style="font-size: 19px;" class="facebook social-icon" href="https://www.facebook.com/varsityvoicebd/" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+            <li><a style="font-size: 19px;" class="pinterest social-icon" href="https://www.youtube.com/channel/UCQy7cC-WxjYMinesebMKykw" title="youtube" target="_blank"><i class="fa fa-youtube"></i></a></li>
             <li><a style="font-size: 19px;" class="twitter social-icon" href="javascript:void(0)" title="Twitter"><i class="fa fa-twitter"></i></a></li>
-            <li><a style="font-size: 19px;" class="pinterest social-icon" href="javascript:void(0)" title="pinterest"><i class="fa fa-pinterest"></i></a></li>
+            
             <li><a style="font-size: 19px;" class="linkedin social-icon" href="javascript:void(0)" title="linkedin"><i class="fa fa-linkedin"></i></a></li>
             <li><a style="font-size: 19px;" class="dribbble social-icon" href="javascript:void(0)" title="Dribbble"><i class="fa fa-dribbble"></i></a></li>
           </ul>
@@ -87,23 +106,41 @@
 <div class="header-logo-area">
   <div class="container">
     <div class="row">
-      <div class="col-xl-5 col-lg-3 col-md-12">
+      <div class="col-xl-2 col-lg-2 col-md-4">
         <div class="logo-design" style="margin-top: -10px; margin-bottom:-6px;"> 
-          <img src="logo.jpg" width="100%">
+          <img src="logoxxx.jpg" width="90%">
         </div>
       </div>
-      <div class="col-xl-7 col-lg-9 col-md-12 d-none d-lg-block d-md-block">
+      <div class="col-xl-10 col-lg-10 col-md-8 d-none d-lg-block d-md-block">
         <div class="row">
-          <div class="col-md-2 col-sm-2">
+          <!--<div class="col-md-2 col-sm-2">
             <div class="header-logo-address">
               <!--<div class="header-logo-icon"> <i class="fa fa-phone-square"></i> </div>
               <div class="header-logo-text">
                 <p>+01 666 777 999</p>
                 <p>+01 555 222 457</p>
-              </div>-->
+              </div>
             </div>
-          </div>
-          <div class="col-md-6 col-sm-6">
+          </div>-->
+          <div class="col-md-9 col-sm-9">
+              <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+            <!-- Horizontal ad -->
+            <ins class="adsbygoogle"
+                 style="display:inline-block;width:710px;height:100px"
+                 data-ad-client="ca-pub-6757398403735844"
+                 data-ad-slot="5028647704"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+            <!--<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+            
+            <ins class="adsbygoogle"
+                 style="display:inline-block;width:710px;height:100px"
+                 data-ad-client="ca-pub-6757398403735844"
+                 data-ad-slot="6098655014"></ins>
+            <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>-->
             <!--<div class="header-logo-address">
               <div class="header-logo-icon"> <i class="fa fa-envelope"></i> </div>
               <div class="header-logo-text">
@@ -112,7 +149,7 @@
               </div>
             </div>-->
           </div>
-          <div class="col-md-4 col-sm-4">
+          <div class="col-md-3 col-sm-3">
             <br>
             <h6 style="font-family:Bangla,sans-serif; font-weight:bold;margin-left:32px;"><script type="text/javascript" src="https://bangladate.appspot.com/index2.php"></script></h6>
             <h6 id="showdate" style="font-family:Bangla,sans-serif; font-weight:bold;margin-left:32px;"></h6>
@@ -150,35 +187,36 @@
                 <li><a href="https://www.varsityvoice.net"><i class="fa fa-home"></i> হোম</a></li>
                 <li><a href="#">ভার্সিটি<i class="fa fa-angle-down"></i></a>
                   <ul class="dropdown_menu">
-                    <li><a href="category.php?name=Public University">পাবলিক ভার্সিটি</a></li>
-                    <li><a href="category.php?name=Private University">প্রাইভেট ভার্সিটি</a></li>                  
+                    <li><a href="/Public-University">পাবলিক ভার্সিটি</a></li>
+                    <li><a href="/Private-University">প্রাইভেট ভার্সিটি</a></li>                  
                   </ul>
                 </li>
-                <li><a href="category.php?name=National">জাতীয়</a></li>
-                <li><a href="category.php?name=International">আন্তর্জাতিক</a></li>
+                <li><a href="/National">জাতীয়</a></li>
+                <li><a href="/International">আন্তর্জাতিক</a></li>
                 
-                <li><a href="category.php?name=Student Politics">ছাত্র রাজনীতি</a>
+                <li><a href="/Student-Politics">ছাত্র রাজনীতি</a>
                 </li>       
-                <li ><a href="category.php?name=Science and Technology">বিজ্ঞান ও প্রযুক্তি</i></a>
+                <li ><a href="/Science-and-Technology">বিজ্ঞান ও প্রযুক্তি</i></a>
                 </li>
-                <li><a href="category.php?name=Scholarship">স্কলারশিপ</a></li>
+                <li><a href="/Scholarship">স্কলারশিপ</a></li>
                         
-                <li><a href="category.php?name=Job News">চাকরির খবর</a></li>
+                <li><a href="/Admission">এডমিশন</a></li>
                 <li><a href="#">ক্যারিয়ার <i class="fa fa-angle-down"></i></a><ul class="dropdown_menu">
-                        <li><a href="category.php?name=Success Story">সফলতার গল্প</a>
+                        <li><a href="/Success-Story">সফলতার গল্প</a>
                         </li>
-                        <li><a href="category.php?name=Interview">সাক্ষাতকার</a></li>
+                        <li><a href="/Interview">সাক্ষাতকার</a></li>
+                        <li><a href="/Job-News">চাকরির খবর</a></li>
 
                   </ul></li>
-                <li><a href="category.php?name=Sports">খেলাধুলা</a></li>
+                <li><a href="/Sports">খেলাধুলা</a></li>
                 <li><a href="#">অন্যান্য<i class="fa fa-angle-down"></i></a>
                   <ul class="dropdown_menu">
-                    <li><a href="category.php?name=Entertainment">বিনোদন</a></li>
-                    <li><a href="category.php?name=Economy">অর্থনীতি</a></li>
-                    <li><a href="category.php?name=Religion">ধর্ম</a></li>
-                    <li><a href="category.php?name=Health">স্বাস্থ্য</a></li>
-                    <li><a href="category.php?name=Literature">সাহিত্য</a></li>
-                    <li><a href="category.php?name=Innovations">উদ্ভাবন</a>
+                    <li><a href="/Entertainment">বিনোদন</a></li>
+                    <li><a href="/Economy">অর্থনীতি</a></li>
+                    <li><a href="/Religion">ধর্ম</a></li>
+                    <li><a href="/Health">স্বাস্থ্য</a></li>
+                    <li><a href="/Literature">সাহিত্য</a></li>
+                    <li><a href="/Innovations">উদ্ভাবন</a>
                     </li>
                   </ul>
                 </li>
@@ -202,40 +240,41 @@
             <div class="mobile-menu">
               <nav id="mobile-menu-active">
                 <ul>
-                <li><a href="index.php"><i class="fa fa-home"></i> হোম</a></li>
+                <li><a href="https://www.varsityvoice.net"><i class="fa fa-home"></i> হোম</a></li>
                 <li><a href="#">ভার্সিটি</a>
                   <ul class="dropdown_menu">
-                    <li><a href="category.php?name=Public University">পাবলিক ভার্সিটি</a></li>
-                    <li><a href="category.php?name=Private University">প্রাইভেট ভার্সিটি</a></li>
+                    <li><a href="/Public-University">পাবলিক ভার্সিটি</a></li>
+                    <li><a href="/Private-University">প্রাইভেট ভার্সিটি</a></li>
                     
                     
                   </ul>
                 </li>
-                <li><a href="category.php?name=National">জাতীয়</a></li>
-                <li><a href="category.php?name=International">আন্তর্জাতিক</a></li>
+                <li><a href="/National">জাতীয়</a></li>
+                <li><a href="/International">আন্তর্জাতিক</a></li>
                 
-                <li><a href="category.php?name=Student Politics">ছাত্র রাজনীতি</a>
+                <li><a href="/Student-Politics">ছাত্র রাজনীতি</a>
                 </li>       
-                <li ><a href="category.php?name=Science and Technology">বিজ্ঞান ও প্রযুক্তি</i></a>
+                <li ><a href="/Science-and-Technology">বিজ্ঞান ও প্রযুক্তি</i></a>
                 </li>
-                <li><a href="category.php?name=Scholarship">স্কলারশিপ</a></li>
+                <li><a href="/Scholarship">স্কলারশিপ</a></li>
                         
-                <li><a href="category.php?name=Job News">চাকরির খবর</a></li>
-                <li><a href="#">ক্যারিয়ার </a><ul class="dropdown_menu">
-                        <li><a href="category.php?name=Success Story">সফলতার গল্প</a>
+                <li><a href="/Admission">এডমিশন</a></li>
+                <li><a href="#">ক্যারিয়ার <i class="fa fa-angle-down"></i></a><ul class="dropdown_menu">
+                        <li><a href="/Success-Story">সফলতার গল্প</a>
                         </li>
-                        <li><a href="category.php?name=Interview">সাক্ষাতকার</a></li>
+                        <li><a href="/Interview">সাক্ষাতকার</a></li>
+                        <li><a href="/Job News">চাকরির খবর</a></li>
 
                   </ul></li>
-                <li><a href="category.php?name=Sports">খেলাধুলা</a></li>
+                <li><a href="/Sports">খেলাধুলা</a></li>
                 <li><a href="#">অন্যান্য</a>
                   <ul class="dropdown_menu">
-                    <li><a href="category.php?name=Entertainment">বিনোদন</a></li>
-                    <li><a href="category.php?name=Economy">অর্থনীতি</a></li>
-                    <li><a href="category.php?name=Religion">ধর্ম</a></li>
-                    <li><a href="category.php?name=Health">স্বাস্থ্য</a></li>
-                    <li><a href="category.php?name=Literature">সাহিত্য</a></li>
-                    <li><a href="category.php?name=Innovations">উদ্ভাবন</a>
+                    <li><a href="/Entertainment">বিনোদন</a></li>
+                    <li><a href="/Economy">অর্থনীতি</a></li>
+                    <li><a href="/Religion">ধর্ম</a></li>
+                    <li><a href="/Health">স্বাস্থ্য</a></li>
+                    <li><a href="/Literature">সাহিত্য</a></li>
+                    <li><a href="/Innovations">উদ্ভাবন</a>
                     </li>
                   </ul>
                 </li>
@@ -249,10 +288,10 @@
   </div>
   <!-- Mobile Menu Area End --> 
   <div style="background: #f9f9f9; border-bottom: 1px solid #f2f2f2;">
-    <div style="background: #EA0107; border-radius: 2px;" class="container">
+    <div style="background: #D23136; border-radius: 2px;" class="container">
       <div class="row">
-      <div class=" col-sm-2 col-md-1 col-lg-1" style=" background: #fff; border: .5px solid #EA0107">
-        <h5 style="margin-bottom: -3px; color: #EA0107; font-family: 'Bangla', sans-serif; text-align: center; ">ব্রেকিংঃ </h5>
+      <div class=" col-sm-2 col-md-1 col-lg-1" style=" background: #fff; border: .5px solid #D23136">
+        <h5 style="margin-bottom: -3px; color: #D23136; font-family: 'Bangla', sans-serif; text-align: center; ">ব্রেকিংঃ </h5>
       </div>
       <div class=" col-sm-10 col-md-11 col-lg-11" style="">
         <marquee behavior="scroll" direction="left" 
