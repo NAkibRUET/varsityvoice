@@ -1,6 +1,6 @@
 <?php
   require_once('db_connect.php');
-  $actual_link = $_SERVER[REQUEST_URI];
+  $actual_link = $_SERVER['REQUEST_URI'];
   $actual_link = str_replace("/category/", "", $actual_link);
   $actual_link = str_replace("/", "", $actual_link);
   if($actual_link==""){

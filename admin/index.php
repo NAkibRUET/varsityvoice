@@ -22,6 +22,16 @@
         $id = generateRandomString();
         $category = $_POST['category'];
         $heading = mysqli_real_escape_string($con,$_POST['heading']);
+        $heading = str_replace("  ", " ", $heading);
+        $url = mysqli_real_escape_string($con,$_POST['url']);
+        $url = str_replace("  ", " ", $url);
+        $urlset = str_replace(" ", "-", $url);
+        $path = "https://www.varsityvoice.net/details/";
+        $path = $path.$urlset;
+        $idset = "/{$id}";
+        $path = $path.$idset;
+        //echo $path;
+        $keyword = $_POST['keyword']; 
         $writer = mysqli_real_escape_string($con,$_POST['writer']);
         $file_name = $_FILES['contentImage']['name'];
         $file_size =$_FILES['contentImage']['size'];
@@ -34,6 +44,7 @@
         if($file_size < 209710){
             $qr = "INSERT INTO `contents` (`id`, `category`, `heading`, `writer`, `file_name`, `content`, `mainNews`, `scrollNews`, `time`) VALUES ('$id', '$category', '$heading', '$writer', '$file_name', '$content', '$mainNews', '$scrollNews',now());";
             $rn = mysqli_query($con,$qr);  
+            $rn2 = mysqli_query($con,"INSERT INTO `extra_details` (`id`, `content_id`, `url_text`, `keywords`) VALUES (NULL, '$id', '$url', '$keyword')");  
             $up = move_uploaded_file($file_tmp,"../posts/".$file_name);   
             if($rn && $up){
                 $success = "<h5 style='color:green;'>Successfully Posted.</h5>";
@@ -45,6 +56,43 @@
         else{
             $error = "<h5 style='color:red;'>File size must be less than 200 KB</h5>";
         }
+        date_default_timezone_set("Asia/Dhaka");
+        $timestamp = new DateTime();
+        echo $timestamp->format('c'); // Returns ISO8601 in proper format
+        //echo $timestamp->format(DateTime::ISO8601);
+        //$time = new Date();
+        //echo $time;
+        $format = 
+        '
+        <url>
+            <loc>
+              '.$path.'
+            </loc>
+            <news:news>
+              <news:publication>
+                <news:name>Varsity Voice</news:name>
+                <news:language>bn</news:language>
+              </news:publication>
+            <news:publication_date>'.$timestamp->format('c').'</news:publication_date>
+            <news:title>
+              '.$heading.'
+            </news:title>
+            <news:keywords>'.$keyword.'</news:keywords>
+            </news:news>  
+        </url>';
+        
+        
+        $myfile = fopen("sitemap.txt", "a") or die("Unable to open file!");
+        //fwrite($myfile, "\n");
+        fwrite($myfile, $format);
+        $myfile = fopen("sitemap.txt", "r") or die("Unable to open file!");
+        $text = fread($myfile,filesize("sitemap.txt"));
+        $text = "\n{$text}\n";
+        $ft = '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">'.$text.'</urlset>';
+        $myfile = fopen("../sitemap/sitemap.xml", "w") or die("Unable to open file!");
+        fwrite($myfile, $ft);
+
+        fclose($myfile);
 
     }
 ?>
@@ -131,8 +179,10 @@
                 
             </select>
             <label><b>Content Headline:</b>*</label>
-            <input required class="form-control" type="text" name="heading" placeholder="Write a headline for your news post" value="<?php if(isset($heading))echo $heading?>">
-
+            <input required class="form-control" type="text" name="heading" placeholder="Ex: ঢাবির ছাত্রীকে রাস্তা থেকে তুলে নিয়ে ধর্ষণের অভিযোগ" value="<?php if(isset($heading))echo $heading?>">
+            <label><b>Url Name: (4-5 Words)</b>*</label>
+            <input required class="form-control" type="text" name="url" placeholder="Ex: ঢাবি ছাত্রীকে ধর্ষণ" value="<?php if(isset($url))echo $url?>">
+            
             <label><b>Writer:</b></label>
             <input class="form-control" type="text" name="writer" placeholder="Author name" value="<?php if(isset($writer))echo $writer?>">
 
@@ -149,16 +199,22 @@
             <!--<script>
                         CKEDITOR.replace( 'content' );
             </script>-->
-            <label>Show as Main News?</label>
+            <label><b>Show as Main News?</b></label>
             <select class="form-control" name="mainNews">
                 <option value="Yes"<?php if(isset($mainNews) && $mainNews=="Yes")echo "selected";?>>Yes</option>
                 <option value="No"<?php if(isset($mainNews) && $mainNews=="No")echo "selected";?>>No</option>
             </select>
-            <label>Show as Scroll?</label>
+            <br>
+            <label><b>Show as Scroll?</b></label>
             <select class="form-control" name="scrollNews">
                 <option value="Yes"<?php if(isset($scrollNews) && $scrollNews=="Yes")echo "selected";?>>Yes</option>
                 <option value="No"<?php if(isset($scrollNews) && $scrollNews=="No")echo "selected";?>>No</option>
             </select>
+            <br>
+            <label><b>Add Some keywords seperated by comma (,)*</b></label>
+            
+            <input required class="form-control" type="text" name="keyword" placeholder="Ex: ঢাকা বিশ্ববিদ্যালয়, ধর্ষণ, অপরাধ" value="<?php if(isset($keyword))echo $keyword?>">
+        
             <br/>
             <button type="submit" class="btn btn-primary" name="submit">Submit</button>
         </form>

@@ -1,0 +1,35 @@
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
+
+        <url>
+            <loc>
+              https://www.varsityvoice.net/details/nakib-bad-boy/a9UV1S
+            </loc>
+            <news:news>
+              <news:publication>
+                <news:name>Varsity Voice</news:name>
+                <news:language>bn</news:language>
+              </news:publication>
+            <news:publication_date>2020-01-07T06:19:21+06:00</news:publication_date>
+            <news:title>
+              nakib is a bad boy
+            </news:title>
+            <news:keywords>nakib, boy, bad</news:keywords>
+            </news:news>  
+        </url>
+        <url>
+            <loc>
+              https://www.varsityvoice.net/details/nakib-bad-boy/LCtkzH
+            </loc>
+            <news:news>
+              <news:publication>
+                <news:name>Varsity Voice</news:name>
+                <news:language>bn</news:language>
+              </news:publication>
+            <news:publication_date>2020-01-07T06:20:02+06:00</news:publication_date>
+            <news:title>
+              nakib is a bad boy
+            </news:title>
+            <news:keywords>nakib, boy, bad</news:keywords>
+            </news:news>  
+        </url>
+</urlset>

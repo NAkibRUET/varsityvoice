@@ -7,7 +7,7 @@
     else{
         header('Location: login');
     }
-    function generateRandomString($length = 32) {
+    function generateRandomString($length = 6) {
         $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
         $charactersLength = strlen($characters);
         $randomString = '';
